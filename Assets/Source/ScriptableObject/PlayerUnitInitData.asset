@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a1d1bb5e4a468abd1b94b4d37ac06a, type: 3}
+  m_Name: PlayerUnitInitData
+  m_EditorClassIdentifier: 
+  <UnitPrefab>k__BackingField: {fileID: 5248435089213178967, guid: e6a5b86c470864742b242627d7e5223f, type: 3}
+  <Rigidbody>k__BackingField: {fileID: 1190786265766457598, guid: e6a5b86c470864742b242627d7e5223f, type: 3}
+  <MovingData>k__BackingField:
+    maxSpeedForward: 100
+    maxSpeedBackward: -10
+    maxSpeedRight: 10
+    maxSpeedLeft: -10
+    accelerationForward: 10
+    accelerationBackward: 3
+    accelerationSide: 1
+    inertiaDamping: 1
+  <DefaultSpeed>k__BackingField: 20
