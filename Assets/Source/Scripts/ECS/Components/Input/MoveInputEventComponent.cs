@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Components
 {
-    public struct InputEventComponent
+    public struct MoveInputEventComponent
     {
         public Vector3 direction;
     }

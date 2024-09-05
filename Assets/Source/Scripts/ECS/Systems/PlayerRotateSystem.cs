@@ -6,7 +6,7 @@ namespace Systems
 {
     public class PlayerRotateSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<RotatableComponent, InputEventComponent> _playerMoveFilter;
+        private readonly EcsFilter<RotatableComponent, RotationInputEventComponent> _playerMoveFilter;
 
         public void Run()
         {

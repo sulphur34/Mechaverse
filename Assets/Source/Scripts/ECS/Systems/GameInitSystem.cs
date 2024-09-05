@@ -27,10 +27,12 @@ namespace Systems
 
             var player = _world.NewEntity();
             player.Get<PlayerComponent>();
-            player.Get<InputEventComponent>();
+            player.Get<RotationInputEventComponent>();
+            player.Get<MoveInputEventComponent>();
 
-            ref var movableComponent = ref player.Get<MovableComponent>();
-            movableComponent.moveSpeed = _playerInitData.DefaultSpeed;
+            ref var movableComponent = ref player.Get<RigidbodyMovableComponent>();
+            movableComponent.movingData = _playerInitData.MovingData;
+            movableComponent.rigidbody = unitActor.GetComponent<Rigidbody2D>();
             movableComponent.transform = unitActor.transform;
 
             ref var rotatableComponent = ref player.Get<RotatableComponent>();

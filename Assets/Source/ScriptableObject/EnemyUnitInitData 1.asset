@@ -12,5 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a1d1bb5e4a468abd1b94b4d37ac06a, type: 3}
   m_Name: EnemyUnitInitData 1
   m_EditorClassIdentifier: 
-  <UnitPrefab>k__BackingField: {fileID: -7411321056893646775, guid: 659bc87f761e6624a8d10440cac28eff, type: 3}
+  <UnitPrefab>k__BackingField: {fileID: 2472373030957189281, guid: 6f64fef8e3f9a72408dff225ffadec18, type: 3}
+  <Rigidbody>k__BackingField: {fileID: 5072726297995933220, guid: 6f64fef8e3f9a72408dff225ffadec18, type: 3}
+  <MovingData>k__BackingField:
+    maxSpeedForward: 0
+    maxSpeedBackward: 0
+    maxSpeedSide: 0
+    accelerationForward: 1
+    accelerationBackward: 0
+    accelerationSide: 0
+    inertiaDamping: 0
   <DefaultSpeed>k__BackingField: 5

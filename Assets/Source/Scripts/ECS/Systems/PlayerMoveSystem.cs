@@ -6,7 +6,7 @@ namespace Systems
 {
     public class PlayerMoveSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<MovableComponent, InputEventComponent> _playerMoveFilter;
+        private readonly EcsFilter<MovableComponent, MoveInputEventComponent> _playerMoveFilter;
 
         public void Run()
         {
@@ -15,8 +15,8 @@ namespace Systems
                 ref var movableComponent = ref _playerMoveFilter.Get1(entity);
                 ref var inputComponent = ref _playerMoveFilter.Get2(entity);
 
-                movableComponent.transform.position +=
-                    inputComponent.direction * (Time.deltaTime * movableComponent.moveSpeed);
+                movableComponent.transform.Translate(inputComponent.direction *
+                                                     Time.deltaTime * movableComponent.moveSpeed, Space.Self);
                 movableComponent.isMoving = inputComponent.direction.sqrMagnitude > 0;
             }
         }

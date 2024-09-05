@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace Systems
 {
-    public class PlayerInputSystem : IEcsRunSystem
+    public class PlayerRotationInputSystem : IEcsRunSystem
     {
         private const string HorizontalAxis = "Horizontal";
         private const string VerticalAxis = "Vertical";
 
-        private readonly EcsFilter<InputEventComponent> _inputEventsFilter;
+        private readonly EcsFilter<RotationInputEventComponent> _inputEventsFilter;
 
         public void Run()
         {
