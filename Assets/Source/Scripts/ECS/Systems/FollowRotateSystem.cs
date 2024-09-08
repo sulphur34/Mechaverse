@@ -20,7 +20,7 @@ namespace Systems
                 }
 
                 var direction = (followComponent.target.position - rotatableComponent.transform.position).normalized;
-                rotatableComponent.transform.right = direction;
+                rotatableComponent.transform.up = direction;
                 direction.z = 0;
             }
         }
