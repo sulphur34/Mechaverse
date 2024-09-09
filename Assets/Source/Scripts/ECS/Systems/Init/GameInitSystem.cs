@@ -34,14 +34,16 @@ namespace Systems
 
             var colliderObserver = unitActor.GetComponent<ColliderObserver>();
             colliderObserver.Initialize(_world, player);
+            var rigidbody = unitActor.Rigidbody2D;
 
             ref var movableComponent = ref player.Get<RigidbodyMovableComponent>();
             movableComponent.movingData = _playerInitData.MovingData;
-            movableComponent.rigidbody = unitActor.GetComponent<Rigidbody2D>();
+            movableComponent.rigidbody = rigidbody;
             movableComponent.transform = unitActor.transform;
 
-            ref var rotatableComponent = ref player.Get<RotatableComponent>();
-            rotatableComponent.transform = unitActor.transform;
+            ref var rotatableComponent = ref player.Get<RigidbodyRotatableComponent>();
+            rotatableComponent.rigidbody = rigidbody;
+            rotatableComponent.rotationData = _playerInitData.RotationData;
 
             ref var animationsComponent = ref player.Get<AnimatedCharacterComponent>();
             animationsComponent.animator = unitActor.Animator;

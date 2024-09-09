@@ -5,68 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2173bd-3974-4999-8524-d498470d59bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Collisions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Collisions/CollisionEnterComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Collisions/CollisionEnterComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Collisions/TriggerEnterComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Collisions/TriggerEnterComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Effects.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Effects/CollisionParticleComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Effects/CollisionParticleComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/ColliderObserver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/ColliderObserver.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/TriggerObserver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/TriggerObserver.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionParticleSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionParticleSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerRigidbodyRotationSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerRigidbodyRotationSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Movement/RigidbodyRotatableComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Movement/RigidbodyRotatableComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Data/RotationData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Data/RotationData.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/Burst.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/Burst.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/AlertQuote Sentinel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/AlertQuote Sentinel.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Blinker Velocity.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Blinker Velocity.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Linus Vanguard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Linus Vanguard.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/RedFang Freightliner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/RedFang Freightliner.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Tenet Voidrunner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Tenet Voidrunner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/AnimatedCharacterComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/AnimatedCharacterComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/DetectionComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/DetectionComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/FollowComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/FollowComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Input/MoveInputEventComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Input/MoveInputEventComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Input/RotationInputEventComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Input/RotationInputEventComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/MoveParticleComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Effects/MoveParticleComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/MoveParticleComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Effects/MoveParticleComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Movement/MovableComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Movement/MovableComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Movement/RigidbodyMovableComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Movement/RigidbodyMovableComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Movement/RotatableComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Movement/RotatableComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/PlayerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/PlayerComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/EnemyUnitInitData 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/EnemyUnitInitData 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/PlayerUnitInitData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/PlayerUnitInitData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Data/UnitInitData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Data/UnitInitData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/UnitActor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/UnitActor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Loader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/AnimatedCharacterSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/AnimatedCharacterSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/AnimatedCharacterSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/AnimatedCharacterSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/FollowMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/FollowMoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/FollowMoveSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/FollowMoveSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/FollowRotateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/FollowRotateSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/FollowRotateSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/FollowRotateSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/GameInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/GameInitSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/MoveParticleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/MoveParticleSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/MoveParticleSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/MoveParticleSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/PlayerMoveInputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerMoveInputSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/PlayerMoveInputSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerMoveInputSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/PlayerMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerMoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/PlayerMoveSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerMoveSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/PlayerRigidbodyMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerRigidbodyMoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/PlayerRigidbodyMoveSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerRigidbodyMoveSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/PlayerRotateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerRotateSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/PlayerRotateSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerRotateSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/PlayerRotationInputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerRotationInputSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/PlayerRotationInputSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerRotationInputSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +117,7 @@
       <workItem from="1725444904449" duration="7895000" />
       <workItem from="1725521616563" duration="7057000" />
       <workItem from="1725796823540" duration="5156000" />
-      <workItem from="1725874209205" duration="6510000" />
+      <workItem from="1725874209205" duration="12880000" />
     </task>
     <servers />
   </component>
@@ -179,24 +134,5 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/ColliderObserver.cs</url>
-          <line>21</line>
-          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\MonoBehaviours\ColliderObserver.cs" containingFunctionPresentation="Method 'OnCollisionEnter2D'">
-            <startOffsets>
-              <option value="500" />
-            </startOffsets>
-            <endOffsets>
-              <option value="522" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

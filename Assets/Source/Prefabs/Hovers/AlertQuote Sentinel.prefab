@@ -89,7 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46bd93afce87d7a40a9e67584b8e3c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Animator>k__BackingField: {fileID: 0}
+  <Animator>k__BackingField: {fileID: 7607833339234904293}
+  <Rigidbody2D>k__BackingField: {fileID: -1674666375046648388}
   <MoveParticleSystem>k__BackingField: {fileID: 6566799526887538164, guid: 284bc5870f2264c49b2e3596a1a60479, type: 3}
   <CollisionParticleSystem>k__BackingField: {fileID: 975600444475453836, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
 --- !u!95 &7607833339234904293
