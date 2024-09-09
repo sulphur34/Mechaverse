@@ -1,4 +1,4 @@
-namespace Components
+namespace ECS.Components
 {
     public class DetectionComponent
     {

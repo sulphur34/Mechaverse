@@ -1,5 +1,8 @@
-using Components;
 using Data;
+using ECS.Components;
+using ECS.Components.Input;
+using ECS.Components.Movement;
+using ECS.MonoBehaviours;
 using Leopotam.Ecs;
 using UnityEngine;
 
@@ -24,11 +27,13 @@ namespace Systems
         public void Init()
         {
             var unitActor = Object.Instantiate(_playerInitData.UnitPrefab, _spawnPoint.position, Quaternion.identity);
-
             var player = _world.NewEntity();
             player.Get<PlayerComponent>();
             player.Get<RotationInputEventComponent>();
             player.Get<MoveInputEventComponent>();
+
+            var colliderObserver = unitActor.GetComponent<ColliderObserver>();
+            colliderObserver.Initialize(_world, player);
 
             ref var movableComponent = ref player.Get<RigidbodyMovableComponent>();
             movableComponent.movingData = _playerInitData.MovingData;
@@ -42,7 +47,10 @@ namespace Systems
             animationsComponent.animator = unitActor.Animator;
 
             ref var moveParticleComponent = ref player.Get<MoveParticleComponent>();
-            moveParticleComponent.particleSystem = unitActor.ParticleSystem;
+            moveParticleComponent.particleSystem = unitActor.MoveParticleSystem;
+
+            ref var collisionParticleComponent = ref player.Get<CollisionParticleComponent>();
+            collisionParticleComponent.particleSystem = unitActor.CollisionParticleSystem;
 
             for (int i = 0; i < 10; i++)
             {
@@ -58,6 +66,9 @@ namespace Systems
 
             var enemy = _world.NewEntity();
 
+            var colliderObserver = unitActor.GetComponent<ColliderObserver>();
+            colliderObserver.Initialize(_world, enemy);
+
             ref var enemyMovableComponent = ref enemy.Get<MovableComponent>();
             enemyMovableComponent.moveSpeed = _enemyInitData.DefaultSpeed;
             enemyMovableComponent.transform = unitActor.transform;
@@ -72,7 +83,7 @@ namespace Systems
             followComponent.target = target;
 
             ref var enemyMoveParticleComponent = ref enemy.Get<MoveParticleComponent>();
-            enemyMoveParticleComponent.particleSystem = unitActor.ParticleSystem;
+            enemyMoveParticleComponent.particleSystem = unitActor.MoveParticleSystem;
         }
     }
 }

@@ -1,4 +1,5 @@
-using Components;
+using ECS.Components.Input;
+using ECS.Components.Movement;
 using Leopotam.Ecs;
 using UnityEngine;
 

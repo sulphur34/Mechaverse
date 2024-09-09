@@ -1,4 +1,5 @@
-using Components;
+using ECS.Components;
+using ECS.Components.Movement;
 using Leopotam.Ecs;
 
 namespace Systems

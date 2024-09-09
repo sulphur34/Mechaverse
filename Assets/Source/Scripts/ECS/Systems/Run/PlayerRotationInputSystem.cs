@@ -1,4 +1,4 @@
-using Components;
+using ECS.Components.Input;
 using Leopotam.Ecs;
 using UnityEngine;
 
