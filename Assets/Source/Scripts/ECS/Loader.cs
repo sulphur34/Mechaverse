@@ -10,6 +10,8 @@ namespace ECS
     {
         [SerializeField] private UnitInitData _playerInitData;
         [SerializeField] private UnitInitData _enemyInitData;
+        [SerializeField] private TurretInitData _turretInitData;
+
         [SerializeField] private Transform _spawnPoint;
 
         private EcsWorld _world;
@@ -22,13 +24,16 @@ namespace ECS
             _updateSystems = new EcsSystems(_world);
             _fixedUpdateSystems = new EcsSystems(_world);
 
-            _updateSystems.Add(new GameInitSystem(_playerInitData, _enemyInitData, _spawnPoint));
+            _updateSystems.Add(new GameInitSystem(_playerInitData, _enemyInitData, _turretInitData, _spawnPoint));
             _updateSystems.Add(new MoveParticleSystem());
 
             _fixedUpdateSystems.Add(new PlayerRotationInputSystem());
+            _fixedUpdateSystems.Add(new TrackingSystem());
+            _fixedUpdateSystems.Add(new TrackingFollowSystem());
             _fixedUpdateSystems.Add(new PlayerMoveInputSystem());
             _fixedUpdateSystems.Add(new PlayerRigidbodyMoveSystem());
             _fixedUpdateSystems.Add(new PlayerRigidbodyRotationSystem());
+            _fixedUpdateSystems.Add(new RigidbodyFollowRotateSystem());
             _fixedUpdateSystems.Add(new FollowMoveSystem());
             _fixedUpdateSystems.Add(new FollowRotateSystem());
             _fixedUpdateSystems.Add(new CollisionParticleSystem());

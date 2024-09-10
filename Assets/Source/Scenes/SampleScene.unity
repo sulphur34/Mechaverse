@@ -277,6 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInitData: {fileID: 11400000, guid: 835b90ccdb87a8a4898cce8dcf71f8e8, type: 2}
   _enemyInitData: {fileID: 11400000, guid: dab332147c3188740aa64677125a58cb, type: 2}
+  _turretInitData: {fileID: 11400000, guid: 4dbb8ad454284b94e9aba33548f554e1, type: 2}
   _spawnPoint: {fileID: 16806824}
 --- !u!4 &617710061
 Transform:
@@ -351,7 +352,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: eca676b7b14228f44bf5d76a2266fa08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

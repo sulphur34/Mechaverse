@@ -8,5 +8,7 @@ namespace EntityActors
         [field: SerializeField] public Rigidbody2D Rigidbody2D { get; private set; }
         [field: SerializeField] public ParticleSystem MoveParticleSystem { get; private set; }
         [field: SerializeField] public ParticleSystem CollisionParticleSystem { get; private set; }
+        [field: SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
+        [field: SerializeField] public Transform TurretPlaceholder { get; private set; }
     }
 }
