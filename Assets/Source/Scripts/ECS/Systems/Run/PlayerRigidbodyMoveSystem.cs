@@ -23,8 +23,8 @@ namespace Systems
                 var currentVelocityY = localVelocity.y;
 
                 var velocityX = inputComponent.direction.y < 0
-                    ? inputComponent.direction.y * movingData.accelerationBackward
-                    : inputComponent.direction.y * movingData.accelerationForward;
+                    ? -inputComponent.direction.y * movingData.accelerationBackward
+                    : -inputComponent.direction.y * movingData.accelerationForward;
 
                 var velocityY = inputComponent.direction.x * movingData.accelerationSide;
 

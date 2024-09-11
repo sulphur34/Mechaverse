@@ -53,6 +53,7 @@ namespace Systems
                 Quaternion.identity);
 
             var turret = _world.NewEntity();
+            turretActor.HingeJoint.connectedBody = unitActor.Rigidbody2D;
             turretActor.HingeJoint.anchor = Vector2.zero;
             turretActor.HingeJoint.connectedAnchor = unitActor.TurretPlaceholder.transform.position;
 
@@ -79,7 +80,7 @@ namespace Systems
 
             ref var targetableComponent = ref player.Get<TargetableComponent>();
             targetableComponent.transform = unitActor.transform;
-            targetableComponent.team = Teams.Enemy;
+            targetableComponent.team = Teams.Player;
 
             var colliderObserver = unitActor.GetComponent<ColliderObserver>();
             colliderObserver.Initialize(_world, player);
