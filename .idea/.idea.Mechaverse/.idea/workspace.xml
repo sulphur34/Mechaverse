@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2173bd-3974-4999-8524-d498470d59bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/BulletActor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/BulletActor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/WeaponActor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/WeaponActor.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Cannon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Cannon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Blinker Velocity.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Blinker Velocity.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/EnemyUnitInitData 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/EnemyUnitInitData 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Data/TurretInitData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Data/TurretInitData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/TurretActor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/TurretActor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/UnitActor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/UnitActor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerRigidbodyMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerRigidbodyMoveSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/AlertQuote Sentinel.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/AlertQuote Sentinel.psb.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Bepser Dragoon.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Bepser Dragoon.psb.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Blinker Velocity.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Blinker Velocity.psb.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Linus Vanguard.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Linus Vanguard.psb.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/RedFang Freightliner.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/RedFang Freightliner.psb.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Tenet Voidrunner.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Tenet Voidrunner.psb.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +67,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Desktop/Mechaverse\Mechaverse.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\LENOVO\Desktop\Mechaverse" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.23f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\LENOVO\Mechaverse -debugCodeOptimization" />
@@ -78,10 +101,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19656">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="19656" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -108,7 +131,9 @@
       <workItem from="1725796823540" duration="5156000" />
       <workItem from="1725874209205" duration="12880000" />
       <workItem from="1725957589714" duration="21140000" />
-      <workItem from="1726046249879" duration="2444000" />
+      <workItem from="1726046249879" duration="5369000" />
+      <workItem from="1726059907460" duration="782000" />
+      <workItem from="1726065988299" duration="4263000" />
     </task>
     <servers />
   </component>

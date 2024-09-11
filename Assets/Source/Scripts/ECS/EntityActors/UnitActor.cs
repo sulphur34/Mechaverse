@@ -10,5 +10,6 @@ namespace EntityActors
         [field: SerializeField] public ParticleSystem CollisionParticleSystem { get; private set; }
         [field: SerializeField] public SpriteRenderer SpriteRenderer { get; private set; }
         [field: SerializeField] public Transform TurretPlaceholder { get; private set; }
+        [field: SerializeField] public Collider2D[] InternalColliders { get; private set; }
     }
 }

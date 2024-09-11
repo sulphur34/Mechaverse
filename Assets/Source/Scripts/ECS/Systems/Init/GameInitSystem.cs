@@ -37,7 +37,7 @@ namespace Systems
             var playerActor = CreatePlayer();
             CreateTurret(playerActor);
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 2; i++)
             {
                 var enemySpawnPosition = _spawnPoint.position +
                                          new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0f);
@@ -73,6 +73,9 @@ namespace Systems
         {
             var unitActor = Object.Instantiate(_playerInitData.UnitPrefab, _spawnPoint.position, Quaternion.identity);
             var player = _world.NewEntity();
+
+            RemoveCollidersInteractions(unitActor.InternalColliders);
+
             player.Get<PlayerComponent>();
             player.Get<RotationInputEventComponent>();
             player.Get<MoveInputEventComponent>();
@@ -113,6 +116,8 @@ namespace Systems
 
             var enemy = _world.NewEntity();
 
+           RemoveCollidersInteractions(unitActor.InternalColliders);
+
             ref var targetableComponent = ref enemy.Get<TargetableComponent>();
             targetableComponent.transform = unitActor.transform;
             targetableComponent.team = Teams.Enemy;
@@ -135,6 +140,17 @@ namespace Systems
 
             ref var enemyMoveParticleComponent = ref enemy.Get<MoveParticleComponent>();
             enemyMoveParticleComponent.particleSystem = unitActor.MoveParticleSystem;
+        }
+
+        private void RemoveCollidersInteractions(Collider2D[] colliders)
+        {
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                for (int j = 0; j < colliders.Length; j++)
+                {
+                    Physics2D.IgnoreCollision(colliders[i], colliders[j]);
+                }
+            }
         }
     }
 }

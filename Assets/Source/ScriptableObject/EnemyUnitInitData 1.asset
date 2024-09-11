@@ -25,4 +25,4 @@ MonoBehaviour:
   <RotationData>k__BackingField:
     maxSpeed: 0
     acceleration: 0
-  <DefaultSpeed>k__BackingField: 0
+  <DefaultSpeed>k__BackingField: 10

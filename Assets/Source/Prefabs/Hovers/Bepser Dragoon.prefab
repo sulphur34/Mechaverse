@@ -175,6 +175,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: -2166636513036826410}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6278882906873201980}
     - targetCorrespondingSourceObject: {fileID: -2061928577512000471, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2529983226088247498}
@@ -205,7 +208,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 258598097932195100}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f06f1f6844a5e284ca147333b6307c98, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -312,7 +315,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 6292684171774033253}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f06f1f6844a5e284ca147333b6307c98, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -395,7 +398,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 6461791442188702721}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f06f1f6844a5e284ca147333b6307c98, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -465,7 +468,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 6670149269500600383}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f06f1f6844a5e284ca147333b6307c98, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -644,6 +647,7 @@ MonoBehaviour:
   <CollisionParticleSystem>k__BackingField: {fileID: 7014822820038540128}
   <SpriteRenderer>k__BackingField: {fileID: 0}
   <TurretPlaceholder>k__BackingField: {fileID: 1686553567565792075}
+  <InternalColliders>k__BackingField: []
 --- !u!95 &308831348782391470
 Animator:
   serializedVersion: 5
@@ -704,6 +708,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb850aba5094cc4b71eeff859aa7f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &6278882906873201980
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7427553595825979528}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.010023594, y: 3.4758635}
+      - {x: -2.0436437, y: 4.017801}
+      - {x: -2.637382, y: 3.4879117}
+      - {x: -2.682863, y: 2.4901538}
+      - {x: -1.6812464, y: -1.5925888}
+      - {x: -0.7581889, y: -4.066732}
+      - {x: 0.7682127, y: -4.0466847}
+      - {x: 1.6668032, y: -1.6301965}
+      - {x: 2.6409335, y: 2.5268326}
+      - {x: 2.6481674, y: 3.492106}
+      - {x: 1.963454, y: 4.0278244}
+  m_UseDelaunayMesh: 0
 --- !u!4 &8636744584416286955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
@@ -723,7 +783,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 8681339575632401615}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f06f1f6844a5e284ca147333b6307c98, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
