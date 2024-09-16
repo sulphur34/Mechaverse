@@ -16,3 +16,6 @@ MonoBehaviour:
   <RotationData>k__BackingField:
     maxSpeed: 50
     acceleration: 10
+  <TrackerRange>k__BackingField: 100
+  <DetectAngle>k__BackingField: 20
+  <DetectRadius>k__BackingField: 50

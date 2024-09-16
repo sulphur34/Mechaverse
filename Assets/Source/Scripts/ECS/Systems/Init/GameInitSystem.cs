@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Data;
 using ECS.Components;
 using ECS.Components.Input;
@@ -19,17 +20,18 @@ namespace Systems
 
         private readonly Transform _spawnPoint;
         private readonly TurretInitData _turretInitData;
+        private readonly WeaponInitData _weaponInitData;
 
-        public GameInitSystem(
-            UnitInitData playerInitData,
+        public GameInitSystem(UnitInitData playerInitData,
             UnitInitData enemyInitData,
             TurretInitData turretInitData,
-            Transform spawnPoint)
+            Transform spawnPoint, WeaponInitData weaponInitData)
         {
             _playerInitData = playerInitData;
             _enemyInitData = enemyInitData;
             _turretInitData = turretInitData;
             _spawnPoint = spawnPoint;
+            _weaponInitData = weaponInitData;
         }
 
         public void Init()
@@ -58,7 +60,7 @@ namespace Systems
             turretActor.HingeJoint.connectedAnchor = unitActor.TurretPlaceholder.transform.position;
 
             ref var trackerComponent = ref turret.Get<TrackerComponent>();
-            trackerComponent.searchRadius = 100f;
+            trackerComponent.searchRadius = _turretInitData.TrackerRange;
             trackerComponent.selfTeam = Teams.Player;
             trackerComponent.selfTransform = turretActor.transform;
 
@@ -66,12 +68,40 @@ namespace Systems
             rotatableComponent.rigidbody = turretActor.Rigidbody2D;
             rotatableComponent.rotationData = _playerInitData.RotationData;
 
+            ref var detectionComponent = ref turret.Get<DetectionComponent>();
+            detectionComponent.angle = _turretInitData.DetectAngle;
+            detectionComponent.radius = _turretInitData.DetectRadius;
+
             turret.Get<FollowComponent>();
+
+            ref var turretComponent = ref turret.Get<TurretComponent>();
+            var weapon = CreateWeapon(turretActor);
+            turretComponent.weapons = new List<EcsEntity>();
+            turretComponent.weapons.Add(weapon);
+        }
+
+        private EcsEntity CreateWeapon(TurretActor turretActor)
+        {
+            var weaponActor = Object.Instantiate(_weaponInitData.WeaponActor, turretActor.transform);
+            var weapon = _world.NewEntity();
+
+            ref var weaponComponent = ref weapon.Get<WeaponComponent>();
+            weaponComponent.projectile = _weaponInitData.ProjectilePrefab;
+            weaponComponent.reloadingSpeed = _weaponInitData.ReloadingSpeed;
+            weaponComponent.shotDelay = _weaponInitData.ShotDelay;
+            weaponComponent.shotForce = _weaponInitData.ShotForce;
+            weaponComponent.shootingPoint = weaponActor.ShootPoint;
+
+            ref var ammoComponent = ref weapon.Get<AmmoComponent>();
+            ammoComponent.maxCapacity = _weaponInitData.MagazineCapacity;
+            ammoComponent.currentCapacity = ammoComponent.maxCapacity;
+
+            return weapon;
         }
 
         private UnitActor CreatePlayer()
         {
-            var unitActor = Object.Instantiate(_playerInitData.UnitPrefab, _spawnPoint.position, Quaternion.identity);
+            var unitActor = Object.Instantiate(_playerInitData.UnitPrefab, _spawnPoint.position, _spawnPoint.rotation);
             var player = _world.NewEntity();
 
             RemoveCollidersInteractions(unitActor.InternalColliders);
@@ -116,7 +146,7 @@ namespace Systems
 
             var enemy = _world.NewEntity();
 
-           RemoveCollidersInteractions(unitActor.InternalColliders);
+            RemoveCollidersInteractions(unitActor.InternalColliders);
 
             ref var targetableComponent = ref enemy.Get<TargetableComponent>();
             targetableComponent.transform = unitActor.transform;

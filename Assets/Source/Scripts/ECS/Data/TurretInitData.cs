@@ -9,7 +9,7 @@ namespace Data
         [field: SerializeField] public TurretActor TurretPrefab { get; private set; }
         [field: SerializeField] public RotationData RotationData { get; private set; }
 
-        [field: SerializeField] public float SearchAngle { get; private set; }
+        [field: SerializeField] public float TrackerRange { get; private set; }
         [field: SerializeField] public float DetectAngle { get; private set; }
         [field: SerializeField] public float DetectRadius { get; private set; }
     }
