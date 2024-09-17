@@ -39,10 +39,10 @@ namespace Systems
             var playerActor = CreatePlayer();
             CreateTurret(playerActor);
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 1; i++)
             {
                 var enemySpawnPosition = _spawnPoint.position +
-                                         new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0f);
+                                         new Vector3(Random.Range(-50f, 50f), Random.Range(-50f, 50f), 0f);
                 CreateEnemy(enemySpawnPosition, playerActor.transform);
             }
         }
@@ -110,6 +110,7 @@ namespace Systems
             player.Get<RotationInputEventComponent>();
             player.Get<MoveInputEventComponent>();
             player.Get<PlayerComponent>();
+            player.Get<CollisionDestructionComponent>();
 
             ref var targetableComponent = ref player.Get<TargetableComponent>();
             targetableComponent.transform = unitActor.transform;
@@ -134,7 +135,7 @@ namespace Systems
             ref var moveParticleComponent = ref player.Get<MoveParticleComponent>();
             moveParticleComponent.particleSystem = unitActor.MoveParticleSystem;
 
-            ref var collisionParticleComponent = ref player.Get<CollisionParticleComponent>();
+            ref var collisionParticleComponent = ref player.Get<SelfCollisionParticleComponent>();
             collisionParticleComponent.particleSystem = unitActor.CollisionParticleSystem;
 
             return unitActor;
@@ -147,6 +148,8 @@ namespace Systems
             var enemy = _world.NewEntity();
 
             RemoveCollidersInteractions(unitActor.InternalColliders);
+
+            enemy.Get<CollisionDestructionComponent>();
 
             ref var targetableComponent = ref enemy.Get<TargetableComponent>();
             targetableComponent.transform = unitActor.transform;

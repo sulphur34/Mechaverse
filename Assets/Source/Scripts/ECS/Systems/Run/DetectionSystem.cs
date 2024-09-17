@@ -6,14 +6,14 @@ namespace Systems
 {
     public class DetectionSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<TrackerComponent, DetectionComponent> _trackerDetectionFilter;
+        private readonly EcsFilter<TrackerComponent, DetectionComponent> _filter;
 
         public void Run()
         {
-            foreach (var entity in _trackerDetectionFilter)
+            foreach (var index in _filter)
             {
-                ref var trackerComponent = ref _trackerDetectionFilter.Get1(entity);
-                ref var detectionComponent = ref _trackerDetectionFilter.Get2(entity);
+                ref var trackerComponent = ref _filter.Get1(index);
+                ref var detectionComponent = ref _filter.Get2(index);
 
                 if(trackerComponent.targetTransform == null)
                     continue;

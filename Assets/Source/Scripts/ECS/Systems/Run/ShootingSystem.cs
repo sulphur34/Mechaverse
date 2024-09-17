@@ -17,29 +17,35 @@ namespace Systems
                 ref var weapon = ref _filter.Get1(index);
                 ref var ammo = ref _filter.Get3(index);
 
-                var projectile =
-                    Object.Instantiate(weapon.projectile, weapon.shootingPoint.position, weapon.shootingPoint.rotation);
-                var projectileEntity = _ecsWorld.NewEntity();
-                projectile.GetComponent<ColliderObserver>().Initialize(_ecsWorld,projectileEntity);
-                ref var projectileComponent = ref projectileEntity.Get<ProjectileComponent>();
-                projectileComponent.rigidbody2D = projectile.Rigidbody2D;
-                projectileComponent.rigidbody2D.AddForce(weapon.projectile.transform.up * weapon.shotForce);
-                ref var entity = ref _filter.GetEntity(index);
+                SpawnProjectile(weapon);
 
+                ref var entity = ref _filter.GetEntity(index);
                 entity.Del<ShotComponent>();
                 ammo.currentCapacity--;
 
-                if (ammo.currentCapacity > 1)
+                ref var recharge = ref entity.Get<RechargeComponent>();
+                recharge.rechargeDuration = weapon.shotDelay;
+
+                if (ammo.currentCapacity <= 0)
                 {
-                    ref var recharge = ref entity.Get<RechargeComponent>();
-                    recharge.rechargeDuration = weapon.shotDelay;
-                }
-                else
-                {
-                   ref var reload = ref entity.Get<ReloadComponent>();
-                   reload.reloadDuration = weapon.reloadingSpeed;
+                    ref var reload = ref entity.Get<ReloadComponent>();
+                    reload.reloadDuration = weapon.reloadingSpeed;
                 }
             }
+        }
+
+        private void SpawnProjectile(WeaponComponent weapon)
+        {
+            var projectile =
+                Object.Instantiate(weapon.projectile, weapon.shootingPoint.position, Quaternion.identity);
+            var projectileEntity = _ecsWorld.NewEntity();
+            projectile.GetComponent<ColliderObserver>().Initialize(_ecsWorld, projectileEntity);
+            projectileEntity.Get<CollisionDestructionComponent>();
+            ref var particleComponent = ref projectileEntity.Get<InstanceCollisionParticleComponent>();
+            particleComponent.particleSystem = projectile.CollisionParticleSystem;
+            ref var projectileComponent = ref projectileEntity.Get<ProjectileComponent>();
+            projectileComponent.rigidbody2D = projectile.Rigidbody2D;
+            projectileComponent.rigidbody2D.AddForce(weapon.shootingPoint.transform.up * weapon.shotForce);
         }
     }
 }

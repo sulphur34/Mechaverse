@@ -18,8 +18,10 @@ namespace Systems
                 {
                     foreach (var weapon in turret.weapons)
                     {
-                        if(!weapon.Has<ReloadComponent>() && !weapon.Has<RechargeComponent>())
-                            weapon.Get<ShotComponent>();
+                        if (weapon.Has<ReloadComponent>() || weapon.Has<RechargeComponent>())
+                            continue;
+
+                        weapon.Get<ShotComponent>();
                     }
                 }
             }

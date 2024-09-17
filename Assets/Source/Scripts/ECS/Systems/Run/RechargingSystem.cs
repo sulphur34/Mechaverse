@@ -15,9 +15,9 @@ namespace Systems
             {
                 ref var rechgarge = ref _filter.Get1(index);
 
-                rechgarge.timeLeft -= Time.deltaTime;
+                rechgarge.timeLeft += Time.deltaTime;
 
-                if(rechgarge.timeLeft <= 0)
+                if(rechgarge.timeLeft >= rechgarge.rechargeDuration)
                     _filter.GetEntity(index).Del<RechargeComponent>();
             }
         }

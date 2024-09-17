@@ -7,15 +7,15 @@ namespace Systems
 {
     public class FollowMoveSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<MovableComponent, FollowComponent> _enemyFollowSystem;
+        private readonly EcsFilter<MovableComponent, FollowComponent> _filter;
         private readonly float _stopDistance = 2f;
 
         public void Run()
         {
-            foreach (var entity in _enemyFollowSystem)
+            foreach (var index in _filter)
             {
-                ref var followComponent = ref _enemyFollowSystem.Get2(entity);
-                ref var movableComponent = ref _enemyFollowSystem.Get1(entity);
+                ref var followComponent = ref _filter.Get2(index);
+                ref var movableComponent = ref _filter.Get1(index);
 
                 if (followComponent.target == null)
                 {

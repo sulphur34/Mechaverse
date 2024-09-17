@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ECS.Components
 {
-    public struct CollisionParticleComponent
+    public struct SelfCollisionParticleComponent
     {
         public ParticleSystem particleSystem;
     }

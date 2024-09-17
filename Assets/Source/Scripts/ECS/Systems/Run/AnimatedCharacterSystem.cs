@@ -9,14 +9,14 @@ namespace Systems
     {
         private static readonly int IsMoving = Animator.StringToHash("IsMoving");
 
-        private readonly EcsFilter<AnimatedCharacterComponent, MovableComponent> _animatedFilter;
+        private readonly EcsFilter<AnimatedCharacterComponent, MovableComponent> _filter;
 
         public void Run()
         {
-            foreach (var entity in _animatedFilter)
+            foreach (var entity in _filter)
             {
-                ref var animatedCharacterComponent = ref _animatedFilter.Get1(entity);
-                ref var movableComponent = ref _animatedFilter.Get2(entity);
+                ref var animatedCharacterComponent = ref _filter.Get1(entity);
+                ref var movableComponent = ref _filter.Get2(entity);
 
                 animatedCharacterComponent.animator.SetBool(IsMoving, movableComponent.isMoving);
             }

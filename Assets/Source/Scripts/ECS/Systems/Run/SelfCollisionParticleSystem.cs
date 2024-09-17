@@ -3,9 +3,9 @@ using Leopotam.Ecs;
 
 namespace Systems
 {
-    public class CollisionParticleSystem : IEcsRunSystem
+    public class SelfCollisionParticleSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<CollisionEnterComponent, CollisionParticleComponent> _collisionEnteredFilter = null;
+        private readonly EcsFilter<CollisionEnterComponent, SelfCollisionParticleComponent> _collisionEnteredFilter = null;
 
         public void Run()
         {
@@ -17,8 +17,6 @@ namespace Systems
                 var particleSystem = collisionParticle.particleSystem;
                 particleSystem.gameObject.transform.position = collisionEnter.collisionPoint;
                 particleSystem.Play();
-
-                _collisionEnteredFilter.GetEntity(i).Del<CollisionEnterComponent>();
             }
         }
     }
