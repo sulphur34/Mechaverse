@@ -5,7 +5,7 @@ namespace Systems
 {
     public class SelfCollisionParticleSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<CollisionEnterComponent, SelfCollisionParticleComponent> _collisionEnteredFilter = null;
+        private readonly EcsFilter<CollisionEnterComponent, SelfCollisionParticleComponent> _collisionEnteredFilter;
 
         public void Run()
         {

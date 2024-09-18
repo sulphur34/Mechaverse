@@ -6,7 +6,7 @@ namespace Systems
 {
     public class ProjectileCollisionSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<CollisionEnterComponent, ProjectileComponent> _filter = null;
+        private readonly EcsFilter<CollisionEnterComponent, ProjectileComponent> _filter;
 
         public void Run()
         {

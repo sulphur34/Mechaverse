@@ -12,5 +12,6 @@ namespace Data
         [field: SerializeField] public float ShotDelay { get; private set; }
         [field: SerializeField] public float ShotForce { get; private set; }
         [field: SerializeField] public float ReloadingSpeed { get; private set; }
+        [field: SerializeField] public float DamageValue { get; private set; }
     }
 }

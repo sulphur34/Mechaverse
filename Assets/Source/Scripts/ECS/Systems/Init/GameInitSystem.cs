@@ -91,6 +91,7 @@ namespace Systems
             weaponComponent.shotDelay = _weaponInitData.ShotDelay;
             weaponComponent.shotForce = _weaponInitData.ShotForce;
             weaponComponent.shootingPoint = weaponActor.ShootPoint;
+            weaponComponent.damageValue = _weaponInitData.DamageValue;
 
             ref var ammoComponent = ref weapon.Get<AmmoComponent>();
             ammoComponent.maxCapacity = _weaponInitData.MagazineCapacity;
@@ -114,6 +115,8 @@ namespace Systems
 
             ref var cameraComponent = ref player.Get<CameraComponent>();
             cameraComponent.camera = Camera.main;
+            cameraComponent.defaultPosition = Camera.main.transform.position;
+            cameraComponent.distanceRate = 1.33f;
 
             ref var targetableComponent = ref player.Get<TargetableComponent>();
             targetableComponent.transform = unitActor.transform;
@@ -140,6 +143,10 @@ namespace Systems
 
             ref var collisionParticleComponent = ref player.Get<SelfCollisionParticleComponent>();
             collisionParticleComponent.particleSystem = unitActor.CollisionParticleSystem;
+
+            ref var healthComponent = ref player.Get<HealthComponent>();
+            healthComponent.maxValue = _playerInitData.HealthValue;
+            healthComponent.currentValue = _playerInitData.HealthValue;
 
             return unitActor;
         }
@@ -176,6 +183,10 @@ namespace Systems
 
             ref var enemyMoveParticleComponent = ref enemy.Get<MoveParticleComponent>();
             enemyMoveParticleComponent.particleSystem = unitActor.MoveParticleSystem;
+
+            ref var healthComponent = ref enemy.Get<HealthComponent>();
+            healthComponent.maxValue = _playerInitData.HealthValue;
+            healthComponent.currentValue = _playerInitData.HealthValue;
         }
 
         private void RemoveCollidersInteractions(Collider2D[] colliders)

@@ -26,3 +26,4 @@ MonoBehaviour:
     maxSpeed: 0
     acceleration: 0
   <DefaultSpeed>k__BackingField: 1
+  <HealthValue>k__BackingField: 50

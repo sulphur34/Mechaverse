@@ -10,5 +10,6 @@ namespace ECS.Components
         public float shotDelay;
         public float shotForce;
         public float reloadingSpeed;
+        public float damageValue;
     }
 }

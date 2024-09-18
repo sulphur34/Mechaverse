@@ -10,5 +10,6 @@ namespace Data
         [field: SerializeField] public MovingData MovingData { get; private set; }
         [field: SerializeField] public RotationData RotationData { get; private set; }
         [field: SerializeField] public float DefaultSpeed { get; private set; } = 1.0f;
+        [field: SerializeField] public float HealthValue { get; private set; }
     }
 }
