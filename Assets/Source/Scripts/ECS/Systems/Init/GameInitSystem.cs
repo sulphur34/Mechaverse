@@ -112,6 +112,9 @@ namespace Systems
             player.Get<PlayerComponent>();
             player.Get<CollisionDestructionComponent>();
 
+            ref var cameraComponent = ref player.Get<CameraComponent>();
+            cameraComponent.camera = Camera.main;
+
             ref var targetableComponent = ref player.Get<TargetableComponent>();
             targetableComponent.transform = unitActor.transform;
             targetableComponent.team = Teams.Player;

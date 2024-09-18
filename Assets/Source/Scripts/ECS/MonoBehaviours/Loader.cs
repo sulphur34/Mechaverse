@@ -31,6 +31,7 @@ namespace ECS
             _updateSystems.Add(new AutofireWeaponSystem());
             _updateSystems.Add(new RechargingSystem());
             _updateSystems.Add(new ReloadSystem());
+            _updateSystems.Add(new CameraFollowSystem());
 
             _fixedUpdateSystems.Add(new PlayerRotationInputSystem());
             _fixedUpdateSystems.Add(new TrackingSystem());

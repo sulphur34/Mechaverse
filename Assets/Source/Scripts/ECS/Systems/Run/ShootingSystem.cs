@@ -37,7 +37,7 @@ namespace Systems
         private void SpawnProjectile(WeaponComponent weapon)
         {
             var projectile =
-                Object.Instantiate(weapon.projectile, weapon.shootingPoint.position, Quaternion.identity);
+                Object.Instantiate(weapon.projectile, weapon.shootingPoint.position, weapon.shootingPoint.rotation);
             var projectileEntity = _ecsWorld.NewEntity();
             projectile.GetComponent<ColliderObserver>().Initialize(_ecsWorld, projectileEntity);
             projectileEntity.Get<CollisionDestructionComponent>();

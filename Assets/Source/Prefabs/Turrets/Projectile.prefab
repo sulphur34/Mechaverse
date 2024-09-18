@@ -103,7 +103,7 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 0}
   <Rigidbody2D>k__BackingField: {fileID: 4274563346871292179}
   <MoveParticleSystem>k__BackingField: {fileID: 6566799526887538164, guid: 284bc5870f2264c49b2e3596a1a60479, type: 3}
-  <CollisionParticleSystem>k__BackingField: {fileID: 8655002196571861105, guid: bbe4130788f6aee4ca0786d710435178, type: 3}
+  <CollisionParticleSystem>k__BackingField: {fileID: 975600444475453836, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
 --- !u!70 &971434630599107931
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
