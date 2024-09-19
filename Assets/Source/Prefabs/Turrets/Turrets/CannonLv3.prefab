@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4641010075399068871}
   - component: {fileID: 8089788920821590003}
   m_Layer: 0
-  m_Name: Cannon
+  m_Name: CannonLv3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: -1808720025, guid: eb7e295ac184b244abecb2c6bac63c0b, type: 3}
+  m_Sprite: {fileID: -2067609337, guid: eb7e295ac184b244abecb2c6bac63c0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,8 +100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Rigidbody2D>k__BackingField: {fileID: 4641010075399068871}
-  <ShootParticle>k__BackingField: {fileID: 0}
   <HingeJoint>k__BackingField: {fileID: 8089788920821590003}
+  <WeaponActor>k__BackingField: {fileID: 4434057871369946765, guid: 455664ed7ae64ce4da8893de6e6ca007, type: 3}
+  <WeaponPositions>k__BackingField:
+  - {x: 0, y: 0}
+  - {x: -0.415, y: 0}
+  - {x: 0.415, y: 0}
 --- !u!50 &4641010075399068871
 Rigidbody2D:
   serializedVersion: 4
@@ -145,7 +149,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 8.63, y: 28.02}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 8.63, y: 28.02}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
