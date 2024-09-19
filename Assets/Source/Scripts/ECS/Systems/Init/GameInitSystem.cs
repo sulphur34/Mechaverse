@@ -39,10 +39,10 @@ namespace Systems
             var playerActor = CreatePlayer();
             CreateTurret(playerActor);
 
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < 20; i++)
             {
                 var enemySpawnPosition = _spawnPoint.position +
-                                         new Vector3(Random.Range(-50f, 50f), Random.Range(-50f, 50f), 0f);
+                                         new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0f);
                 CreateEnemy(enemySpawnPosition, playerActor.transform);
             }
         }
@@ -75,14 +75,19 @@ namespace Systems
             turret.Get<FollowComponent>();
 
             ref var turretComponent = ref turret.Get<TurretComponent>();
-            var weapon = CreateWeapon(turretActor);
+
             turretComponent.weapons = new List<EcsEntity>();
-            turretComponent.weapons.Add(weapon);
+            foreach (var position in turretActor.WeaponPositions)
+            {
+                var weapon = CreateWeapon(turretActor, position);
+                turretComponent.weapons.Add(weapon);
+            }
         }
 
-        private EcsEntity CreateWeapon(TurretActor turretActor)
+        private EcsEntity CreateWeapon(TurretActor turretActor, Vector2 position)
         {
-            var weaponActor = Object.Instantiate(_weaponInitData.WeaponActor, turretActor.transform);
+            var weaponActor = Object.Instantiate(turretActor.WeaponActor, turretActor.transform);
+            weaponActor.transform.position = position;
             var weapon = _world.NewEntity();
 
             ref var weaponComponent = ref weapon.Get<WeaponComponent>();
@@ -185,8 +190,8 @@ namespace Systems
             enemyMoveParticleComponent.particleSystem = unitActor.MoveParticleSystem;
 
             ref var healthComponent = ref enemy.Get<HealthComponent>();
-            healthComponent.maxValue = _playerInitData.HealthValue;
-            healthComponent.currentValue = _playerInitData.HealthValue;
+            healthComponent.maxValue = _enemyInitData.HealthValue;
+            healthComponent.currentValue = _enemyInitData.HealthValue;
         }
 
         private void RemoveCollidersInteractions(Collider2D[] colliders)

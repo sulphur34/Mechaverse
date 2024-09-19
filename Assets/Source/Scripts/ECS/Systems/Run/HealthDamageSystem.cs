@@ -18,13 +18,12 @@ namespace Systems
 
                 if (health.currentValue <= health.minValue)
                 {
-                    Debug.Log("Dead");
+                    entity.Del<FollowComponent>();
                     entity.Del<TargetableComponent>();
                     continue;
                 }
 
                 health.currentValue -= damage.value;
-                Debug.Log("Damaged by - " + damage.value + " Current health - " + health.currentValue );
 
                 entity.Del<DamageReceiveComponent>();
             }
