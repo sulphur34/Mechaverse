@@ -21,12 +21,13 @@ namespace Systems
                 Vector2 localVelocity = movableComponent.transform.InverseTransformDirection(rigidbody.velocity);
                 var currentVelocityX = localVelocity.x;
                 var currentVelocityY = localVelocity.y;
+                Debug.Log(currentVelocityY);
 
-                var velocityX = inputComponent.direction.y < 0
-                    ? -inputComponent.direction.y * movingData.accelerationBackward
-                    : -inputComponent.direction.y * movingData.accelerationForward;
+                var velocityY = inputComponent.direction.y < 0
+                    ? inputComponent.direction.y * movingData.accelerationBackward
+                    : inputComponent.direction.y * movingData.accelerationForward;
 
-                var velocityY = inputComponent.direction.x * movingData.accelerationSide;
+                var velocityX = inputComponent.direction.x * movingData.accelerationSide;
 
                 velocityY = Mathf.Clamp(currentVelocityY + velocityY, movingData.maxSpeedBackward,
                     movingData.maxSpeedForward) - currentVelocityY;
