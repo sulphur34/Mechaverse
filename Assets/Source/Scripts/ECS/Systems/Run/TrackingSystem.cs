@@ -17,6 +17,8 @@ namespace Systems
                 Transform closestTarget = null;
                 float minDistance = tracker.searchRadius;
 
+                tracker.targetTransform = null;
+
                 foreach (var target in _targetableFilter)
                 {
                     ref var targetable = ref _targetableFilter.Get1(target);

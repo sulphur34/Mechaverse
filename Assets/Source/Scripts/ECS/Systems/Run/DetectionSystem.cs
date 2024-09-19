@@ -15,8 +15,11 @@ namespace Systems
                 ref var trackerComponent = ref _filter.Get1(index);
                 ref var detectionComponent = ref _filter.Get2(index);
 
-                if(trackerComponent.targetTransform == null)
+                if (trackerComponent.targetTransform == null)
+                {
+                    detectionComponent.isInRange = false;
                     continue;
+                }
 
                 var targetPosition = trackerComponent.targetTransform.position;
                 var selfPosition = trackerComponent.selfTransform.position;
