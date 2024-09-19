@@ -1,6 +1,6 @@
-namespace Components
+namespace ECS.Components
 {
-    public class DetectionComponent
+    public struct DetectionComponent
     {
         public float radius;
         public float angle;

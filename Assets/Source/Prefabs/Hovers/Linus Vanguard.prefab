@@ -57,11 +57,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284bc5870f2264c49b2e3596a1a60479, type: 3}
---- !u!198 &1242726994802639313 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6566799526887538164, guid: 284bc5870f2264c49b2e3596a1a60479, type: 3}
-  m_PrefabInstance: {fileID: 5340979980083248165}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7631311846885517266 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2592144084890213367, guid: 284bc5870f2264c49b2e3596a1a60479, type: 3}
@@ -135,6 +130,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: bc91668e65b912d4ba20fd8db27acb32, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6476412706078467585}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: bc91668e65b912d4ba20fd8db27acb32, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7884733907207159791}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: bc91668e65b912d4ba20fd8db27acb32, type: 3}
 --- !u!1 &5453426936847612636 stripped
 GameObject:
@@ -154,7 +152,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Animator>k__BackingField: {fileID: 1517048522437862861}
-  <ParticleSystem>k__BackingField: {fileID: 1242726994802639313}
+  <Rigidbody2D>k__BackingField: {fileID: 6476412706078467585}
+  <MoveParticleSystem>k__BackingField: {fileID: 6566799526887538164, guid: 284bc5870f2264c49b2e3596a1a60479, type: 3}
+  <CollisionParticleSystem>k__BackingField: {fileID: 975600444475453836, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
 --- !u!95 &1517048522437862861
 Animator:
   serializedVersion: 5
@@ -203,6 +203,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7884733907207159791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5453426936847612636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb850aba5094cc4b71eeff859aa7f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6586073770041172671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: bc91668e65b912d4ba20fd8db27acb32, type: 3}

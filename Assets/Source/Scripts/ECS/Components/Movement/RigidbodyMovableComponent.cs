@@ -1,7 +1,7 @@
 using Data;
 using UnityEngine;
 
-namespace Components
+namespace ECS.Components.Movement
 {
     public struct RigidbodyMovableComponent
     {

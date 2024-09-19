@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Components
+namespace ECS.Components.Input
 {
     public struct RotationInputEventComponent
     {

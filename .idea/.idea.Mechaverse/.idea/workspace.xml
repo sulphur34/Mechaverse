@@ -5,28 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2173bd-3974-4999-8524-d498470d59bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/HealthComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/HealthComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Weapon/DamageInflictComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Weapon/DamageInflictComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Weapon/DamageReceiveComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Weapon/DamageReceiveComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CameraDistanceSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CameraDistanceSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionDamageSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionDamageSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/HealthDamageSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/HealthDamageSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/FollowRotateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/FollowRotateSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/PlayerRotateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/PlayerRotateSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/AlertQuote Sentinel.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/AlertQuote Sentinel.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Bepser Dragoon.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Bepser Dragoon.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Blinker Velocity.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Blinker Velocity.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Linus Vanguard.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Linus Vanguard.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/RedFang Freightliner.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/RedFang Freightliner.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Tenet Voidrunner.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Tenet Voidrunner.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Ресурс 4@4x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Ресурс 4@4x.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/EnemyUnitInitData 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/EnemyUnitInitData 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/PlayerUnitInitData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/PlayerUnitInitData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/WeaponInitData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/WeaponInitData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/CameraComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/CameraComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/EnemyComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/EnemyComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Weapon/WeaponComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Weapon/WeaponComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Data/UnitInitData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Data/UnitInitData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Data/WeaponInitData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Data/WeaponInitData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/Loader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ProjectileCollisionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ProjectileCollisionSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/SelfCollisionParticleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/SelfCollisionParticleSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ShootingSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ShootingSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/9c/3692b5b4/Behaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/b0/4b90c8cd/Component.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/c4/2b167987/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/d0/aec1d7e8/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/Utilitiy/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs@1213c31c9e/src/EcsEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs@1213c31c9e/src/EcsFilter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs@1213c31c9e/src/EcsSystem.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -40,19 +81,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ecs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Desktop/Mechaverse\Mechaverse.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\LENOVO\Desktop\Mechaverse" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.23f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\LENOVO\Mechaverse -debugCodeOptimization" />
@@ -79,10 +129,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10624">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="10624" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -106,6 +156,20 @@
       <workItem from="1725369146795" duration="8053000" />
       <workItem from="1725444904449" duration="7895000" />
       <workItem from="1725521616563" duration="7057000" />
+      <workItem from="1725796823540" duration="5156000" />
+      <workItem from="1725874209205" duration="12880000" />
+      <workItem from="1725957589714" duration="21140000" />
+      <workItem from="1726046249879" duration="5369000" />
+      <workItem from="1726059907460" duration="782000" />
+      <workItem from="1726065988299" duration="4263000" />
+      <workItem from="1726131226072" duration="1839000" />
+      <workItem from="1726142579488" duration="5571000" />
+      <workItem from="1726217591838" duration="15169000" />
+      <workItem from="1726392608559" duration="15269000" />
+      <workItem from="1726481475442" duration="14471000" />
+      <workItem from="1726565832680" duration="67000" />
+      <workItem from="1726566480613" duration="14790000" />
+      <workItem from="1726647187518" duration="14443000" />
     </task>
     <servers />
   </component>
@@ -122,5 +186,89 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ProjectileCollisionSystem.cs</url>
+          <line>14</line>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\ProjectileCollisionSystem.cs" containingFunctionPresentation="Method 'Run'">
+            <startOffsets>
+              <option value="343" />
+            </startOffsets>
+            <endOffsets>
+              <option value="384" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ShootingSystem.cs</url>
+          <line>25</line>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\ShootingSystem.cs" containingFunctionPresentation="Method 'Run'">
+            <startOffsets>
+              <option value="705" />
+            </startOffsets>
+            <endOffsets>
+              <option value="760" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/RechargingSystem.cs</url>
+          <line>15</line>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\RechargingSystem.cs" containingFunctionPresentation="Method 'Run'">
+            <startOffsets>
+              <option value="347" />
+            </startOffsets>
+            <endOffsets>
+              <option value="391" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/ColliderObserver.cs</url>
+          <line>21</line>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\MonoBehaviours\ColliderObserver.cs" containingFunctionPresentation="Method 'OnCollisionEnter2D'">
+            <startOffsets>
+              <option value="500" />
+            </startOffsets>
+            <endOffsets>
+              <option value="522" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/TrackingSystem.cs</url>
+          <line>15</line>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\TrackingSystem.cs" containingFunctionPresentation="Method 'Run'">
+            <startOffsets>
+              <option value="398" />
+            </startOffsets>
+            <endOffsets>
+              <option value="448" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CameraDistanceSystem.cs</url>
+          <line>15</line>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\CameraDistanceSystem.cs" containingFunctionPresentation="Method 'Run'">
+            <startOffsets>
+              <option value="386" />
+            </startOffsets>
+            <endOffsets>
+              <option value="436" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
