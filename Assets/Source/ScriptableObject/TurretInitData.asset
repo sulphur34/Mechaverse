@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507f20a491544aa8ac9a0dcf3341e1b4, type: 3}
   m_Name: TurretInitData
   m_EditorClassIdentifier: 
-  <TurretPrefab>k__BackingField: {fileID: 8476784290010413698, guid: 795a6e6d570c4c0439ba88e46bd7466c, type: 3}
+  <TurretPrefab>k__BackingField: {fileID: 8476784290010413698, guid: 864d070c82f032a4f9cf7af185264e19, type: 3}
   <RotationData>k__BackingField:
     maxSpeed: 50
     acceleration: 10
