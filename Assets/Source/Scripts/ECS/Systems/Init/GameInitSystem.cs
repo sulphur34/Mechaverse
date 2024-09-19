@@ -116,7 +116,7 @@ namespace Systems
             ref var cameraComponent = ref player.Get<CameraComponent>();
             cameraComponent.camera = Camera.main;
             cameraComponent.defaultPosition = Camera.main.transform.position;
-            cameraComponent.distanceRate = 1.33f;
+            cameraComponent.distanceRate = 2f;
 
             ref var targetableComponent = ref player.Get<TargetableComponent>();
             targetableComponent.transform = unitActor.transform;
