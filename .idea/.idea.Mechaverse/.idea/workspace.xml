@@ -5,22 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2173bd-3974-4999-8524-d498470d59bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Collisions/CollisionObjectDestructionComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Collisions/CollisionObjectDestructionComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/HealthReceiveComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/HealthReceiveComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/HealthRefillComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/HealthRefillComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Data/PickUpsInitData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Data/PickUpsInitData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/PickUpActor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/PickUpActor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionHealthRefillSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionHealthRefillSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/HealthRefillSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/HealthRefillSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/OnCollisionObjectDestroySystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/OnCollisionObjectDestroySystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Cannon.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Cannon.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Projectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Weapon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Weapon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Color Palette.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Color Palette.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/EnergyCellCollect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/EnergyCellCollect.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/EnemyUnitInitData 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/EnemyUnitInitData 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/PlayerUnitInitData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/PlayerUnitInitData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/TurretInitData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/TurretInitData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/TurretActor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/TurretActor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/Loader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/HealthDamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/HealthDamageSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerMoveInputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerMoveInputSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerRigidbodyMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerRigidbodyMoveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionDestructionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionComponentDestructionSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionDestructionSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionComponentDestructionSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ShootingSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ShootingSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,10 +130,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8660">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="8660" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -161,6 +171,7 @@
       <workItem from="1726565832680" duration="67000" />
       <workItem from="1726566480613" duration="14790000" />
       <workItem from="1726647187518" duration="14443000" />
+      <workItem from="1726814919793" duration="9823000" />
     </task>
     <servers />
   </component>

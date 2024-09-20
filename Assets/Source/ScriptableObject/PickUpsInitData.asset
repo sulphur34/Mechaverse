@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65437320a9f5428da0024a6befb608c8, type: 3}
+  m_Name: PickUpsInitData
+  m_EditorClassIdentifier: 
+  <PickUpActor>k__BackingField: {fileID: 3422208905578279449, guid: 2021f206aa7a84347a27e03c3aa07c60, type: 3}
+  <HaalthRestoreValue>k__BackingField: 40

@@ -46,6 +46,8 @@ namespace Systems
             ref var projectileComponent = ref projectileEntity.Get<ProjectileComponent>();
             projectileComponent.rigidbody2D = projectile.Rigidbody2D;
             projectileComponent.rigidbody2D.AddForce(weapon.shootingPoint.transform.up * weapon.shotForce);
+            ref var collisionObjectDestructionComponent = ref projectileEntity.Get<CollisionObjectDestructionComponent>();
+            collisionObjectDestructionComponent.destroyObject = projectile.gameObject;
             ref var damageInflictComponent = ref projectileEntity.Get<DamageInflictComponent>();
             damageInflictComponent.value = weapon.damageValue;
         }
