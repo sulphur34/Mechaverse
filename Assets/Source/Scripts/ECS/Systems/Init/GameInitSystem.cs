@@ -21,17 +21,21 @@ namespace Systems
         private readonly Transform _spawnPoint;
         private readonly TurretInitData _turretInitData;
         private readonly WeaponInitData _weaponInitData;
+        private readonly PickUpsInitData _pickUpsInitData;
 
         public GameInitSystem(UnitInitData playerInitData,
             UnitInitData enemyInitData,
             TurretInitData turretInitData,
-            Transform spawnPoint, WeaponInitData weaponInitData)
+            Transform spawnPoint,
+            WeaponInitData weaponInitData,
+            PickUpsInitData pickUpsInitData)
         {
             _playerInitData = playerInitData;
             _enemyInitData = enemyInitData;
             _turretInitData = turretInitData;
             _spawnPoint = spawnPoint;
             _weaponInitData = weaponInitData;
+            _pickUpsInitData = pickUpsInitData;
         }
 
         public void Init()
@@ -44,7 +48,27 @@ namespace Systems
                 var enemySpawnPosition = _spawnPoint.position +
                                          new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0f);
                 CreateEnemy(enemySpawnPosition, playerActor.transform);
+                CreatePickUps();
             }
+        }
+
+        private void CreatePickUps()
+        {
+            var pickUpSpawnPosition = _spawnPoint.position +
+                                      new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0f);
+            var pickUpActor =
+                Object.Instantiate(_pickUpsInitData.PickUpActor, pickUpSpawnPosition, Quaternion.identity);
+            var pickUp = _world.NewEntity();
+            pickUpActor.GetComponent<ColliderObserver>().Initialize(_world, pickUp);
+
+            ref var healthRefillComponent = ref pickUp.Get<HealthRefillComponent>();
+            healthRefillComponent.refillAmount = _pickUpsInitData.HaalthRestoreValue;
+
+            ref var collisionParticleComponent = ref pickUp.Get<InstanceCollisionParticleComponent>();
+            collisionParticleComponent.particleSystem = pickUpActor.CollisionParticleSystem;
+
+            ref var collisionObjectDestructionComponent = ref pickUp.Get<CollisionObjectDestructionComponent>();
+            collisionObjectDestructionComponent.destroyObject = pickUpActor.gameObject;
         }
 
         private void CreateTurret(UnitActor unitActor)

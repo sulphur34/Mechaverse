@@ -3,7 +3,7 @@ using Leopotam.Ecs;
 
 namespace Systems
 {
-    public class CollisionDestructionSystem : IEcsRunSystem
+    public class CollisionComponentDestructionSystem : IEcsRunSystem
     {
         private readonly EcsFilter<CollisionEnterComponent, CollisionDestructionComponent> _filter = null;
 

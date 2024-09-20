@@ -12,6 +12,8 @@ namespace ECS
         [SerializeField] private UnitInitData _enemyInitData;
         [SerializeField] private WeaponInitData _weaponInitData;
         [SerializeField] private TurretInitData _turretInitData;
+        [SerializeField] private PickUpsInitData _pickUpsInitData;
+
 
         [SerializeField] private Transform _spawnPoint;
 
@@ -25,7 +27,7 @@ namespace ECS
             _updateSystems = new EcsSystems(_world);
             _fixedUpdateSystems = new EcsSystems(_world);
 
-            _updateSystems.Add(new GameInitSystem(_playerInitData, _enemyInitData, _turretInitData, _spawnPoint, _weaponInitData));
+            _updateSystems.Add(new GameInitSystem(_playerInitData, _enemyInitData, _turretInitData, _spawnPoint, _weaponInitData, _pickUpsInitData));
             _updateSystems.Add(new MoveParticleSystem());
             _updateSystems.Add(new DetectionSystem());
             _updateSystems.Add(new AutofireWeaponSystem());
@@ -50,8 +52,8 @@ namespace ECS
             _fixedUpdateSystems.Add(new CameraDistanceSystem());
             //_updateSystems.Add(new PlayerMoveSystem());
             //_systems.Add(new AnimatedCharacterSystem());w
-            _fixedUpdateSystems.Add(new ProjectileCollisionSystem());
-            _fixedUpdateSystems.Add(new CollisionDestructionSystem());
+            _fixedUpdateSystems.Add(new OnCollisionObjectDestroySystem());
+            _fixedUpdateSystems.Add(new CollisionComponentDestructionSystem());
 
             _updateSystems.Init();
             _fixedUpdateSystems.Init();
