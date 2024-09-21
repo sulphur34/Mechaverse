@@ -27,7 +27,8 @@ namespace Systems
                 float targetAngle = Mathf.Atan2(-targetDirection.x, targetDirection.y) * Mathf.Rad2Deg;
                 float currentAngle = rotatableComponent.rigidbody.rotation;
                 float angleDifference = Mathf.DeltaAngle(currentAngle, targetAngle);
-                float torque = angleDifference * rotatableComponent.rotationData.acceleration;
+                float dampingTorque = -rotatableComponent.rigidbody.angularVelocity * 0.5f;
+                float torque = angleDifference * rotatableComponent.rotationData.acceleration + dampingTorque;
                 rotatableComponent.rigidbody.AddTorque(torque);
                 float clampedAngularVelocity = Mathf.Clamp(rotatableComponent.rigidbody.angularVelocity, -rotatableComponent.rotationData.maxSpeed, rotatableComponent.rotationData.maxSpeed);
                 rotatableComponent.rigidbody.angularVelocity = clampedAngularVelocity;
