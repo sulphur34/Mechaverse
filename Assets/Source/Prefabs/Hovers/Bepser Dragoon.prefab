@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3551514704803593467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6889836451894156033}
+  m_Layer: 0
+  m_Name: FrontWeaponPlaceholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6889836451894156033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3551514704803593467}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8636744584416286955}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4475143487764055894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 60592910092894118}
+  m_Layer: 0
+  m_Name: FrontWeaponPlaceholder (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &60592910092894118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4475143487764055894}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8636744584416286955}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6171310192843770344
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,7 +87,38 @@ Transform:
   m_GameObject: {fileID: 6171310192843770344}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.3, z: 0}
+  m_LocalPosition: {x: -1.5, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8636744584416286955}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6422674012289691322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906171600527823267}
+  m_Layer: 0
+  m_Name: TurretPlaceholder (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &906171600527823267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6422674012289691322}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.5, y: 0.79999995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -228,7 +321,16 @@ PrefabInstance:
       addedObject: {fileID: 1686553567565792075}
     - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 906171600527823267}
+    - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1516588255098538515}
+    - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6889836451894156033}
+    - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 60592910092894118}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
       insertIndex: -1
@@ -713,8 +815,18 @@ MonoBehaviour:
   <MoveParticleSystem>k__BackingField: {fileID: 5095274209055852593}
   <CollisionParticleSystem>k__BackingField: {fileID: 1516588255098538512}
   <SpriteRenderer>k__BackingField: {fileID: 0}
-  <TurretPlaceholder>k__BackingField: {fileID: 1686553567565792075}
-  <InternalColliders>k__BackingField: []
+  <TurretPlaceholders>k__BackingField:
+  - {fileID: 1686553567565792075}
+  - {fileID: 906171600527823267}
+  <InternalColliders>k__BackingField:
+  - {fileID: 2529983226088247498}
+  - {fileID: 6061367082637071959}
+  - {fileID: 323008225506637696}
+  - {fileID: 3065812878436612409}
+  - {fileID: 1682533420621810791}
+  <FrontWeaponsPlaceholders>k__BackingField:
+  - {fileID: 6889836451894156033}
+  - {fileID: 60592910092894118}
 --- !u!95 &308831348782391470
 Animator:
   serializedVersion: 5
