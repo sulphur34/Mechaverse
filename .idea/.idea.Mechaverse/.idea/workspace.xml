@@ -5,10 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2173bd-3974-4999-8524-d498470d59bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Input/ShootInputComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Input/ShootInputComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerFireWeaponSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerFireWeaponSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ShootInputSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ShootInputSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" afterDir="false" />
-<<<<<<< Updated upstream
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Levels/DesertArena.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Levels/DesertArena.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Projectile.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Projectile.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Weapon.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Weapon.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/WeaponInitData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/WeaponInitData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/UnitActor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/UnitActor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/Loader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
 =======
       <change beforePath="$PROJECT_DIR$/Assets/Source/Materials/Particle/Blob.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Materials/Particle/Blob.mat" afterDir="false" />
@@ -117,10 +131,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17124">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="17124" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -246,6 +260,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs</url>
+          <line>48</line>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Init\GameInitSystem.cs" containingFunctionPresentation="Method 'Init'">
+            <startOffsets>
+              <option value="1609" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1805" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

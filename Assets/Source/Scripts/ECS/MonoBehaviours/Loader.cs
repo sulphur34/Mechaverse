@@ -3,6 +3,7 @@ using Data;
 using Leopotam.Ecs;
 using Systems;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ECS
 {
@@ -10,7 +11,8 @@ namespace ECS
     {
         [SerializeField] private UnitInitData _playerInitData;
         [SerializeField] private UnitInitData _enemyInitData;
-        [SerializeField] private WeaponInitData _weaponInitData;
+        [SerializeField] private WeaponInitData _turretWeaponInitData;
+        [SerializeField] private WeaponInitData _mainWeaponInitData;
         [SerializeField] private TurretInitData _turretInitData;
         [SerializeField] private PickUpsInitData _pickUpsInitData;
 
@@ -27,13 +29,21 @@ namespace ECS
             _updateSystems = new EcsSystems(_world);
             _fixedUpdateSystems = new EcsSystems(_world);
 
-            _updateSystems.Add(new GameInitSystem(_playerInitData, _enemyInitData, _turretInitData, _spawnPoint, _weaponInitData, _pickUpsInitData));
+            _updateSystems.Add(new GameInitSystem(
+                _playerInitData,
+                _enemyInitData,
+                _turretInitData,
+                _spawnPoint,
+                _turretWeaponInitData,
+                _pickUpsInitData, _mainWeaponInitData));
             _updateSystems.Add(new MoveParticleSystem());
             _updateSystems.Add(new DetectionSystem());
             _updateSystems.Add(new AutofireWeaponSystem());
             _updateSystems.Add(new RechargingSystem());
             _updateSystems.Add(new ReloadSystem());
             _updateSystems.Add(new CameraFollowSystem());
+            _updateSystems.Add(new ShootInputSystem());
+            _updateSystems.Add(new PlayerFireWeaponSystem());
 
             _fixedUpdateSystems.Add(new PlayerRotationInputSystem());
             _fixedUpdateSystems.Add(new TrackingSystem());

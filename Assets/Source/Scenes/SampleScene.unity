@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 1, g: 0.9739756, b: 0.8915094, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -35,7 +35,7 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
@@ -1065,7 +1065,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -108}
+  m_LocalPosition: {x: 0, y: 0, z: -80}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1102,7 +1102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInitData: {fileID: 11400000, guid: 835b90ccdb87a8a4898cce8dcf71f8e8, type: 2}
   _enemyInitData: {fileID: 11400000, guid: dab332147c3188740aa64677125a58cb, type: 2}
-  _weaponInitData: {fileID: 11400000, guid: 8c2090232abd5284ba1db22d39a638b2, type: 2}
+  _turretWeaponInitData: {fileID: 11400000, guid: 8c2090232abd5284ba1db22d39a638b2, type: 2}
+  _mainWeaponInitData: {fileID: 11400000, guid: b5265222d987f764bb6d9f317ff4fe3f, type: 2}
   _turretInitData: {fileID: 11400000, guid: 4dbb8ad454284b94e9aba33548f554e1, type: 2}
   _pickUpsInitData: {fileID: 11400000, guid: 709bc31f609bf884e97b4b05e9245a2e, type: 2}
   _spawnPoint: {fileID: 16806824}
