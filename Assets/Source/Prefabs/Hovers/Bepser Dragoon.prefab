@@ -741,8 +741,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46bd93afce87d7a40a9e67584b8e3c26, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   <Animator>k__BackingField: {fileID: 308831348782391470}
   <Rigidbody2D>k__BackingField: {fileID: 1190786265766457598}
   <MoveParticleSystem>k__BackingField: {fileID: 1829373236425016001}
@@ -776,7 +776,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -818,8 +818,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cb850aba5094cc4b71eeff859aa7f20, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!60 &6278882906873201980
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1121,7 +1121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6326025820110139649, guid: ffd59588272d9e246a132ce3f6d3c6d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6326025820110139649, guid: ffd59588272d9e246a132ce3f6d3c6d9, type: 3}
       propertyPath: m_LocalPosition.z

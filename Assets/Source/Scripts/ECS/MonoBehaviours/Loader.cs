@@ -1,9 +1,7 @@
-using System;
 using Data;
 using Leopotam.Ecs;
 using Systems;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace ECS
 {
