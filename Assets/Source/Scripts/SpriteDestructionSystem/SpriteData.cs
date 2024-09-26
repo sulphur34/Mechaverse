@@ -1,4 +1,5 @@
 using System;
+using MeshGenerationSystem;
 using UnityEngine;
 
 namespace SpriteDestructionSystem
@@ -62,6 +63,11 @@ namespace SpriteDestructionSystem
                 }
             }
             return true;
+        }
+
+        public bool IsSolid(Quad quad)
+        {
+            return _points[quad.XAdress, quad.YAdress];
         }
     }
 }

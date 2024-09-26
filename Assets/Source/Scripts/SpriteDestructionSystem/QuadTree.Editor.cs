@@ -15,7 +15,10 @@ namespace SpriteDestructionSystem
 
             foreach (Quad quad in this)
             {
-                bool isSolid = _spriteData.IsQuadUniform(quad);
+                if(!_spriteData.IsQuadUniform(quad))
+                    continue;
+
+                bool isSolid = _spriteData.IsSolid(quad);
 
                 Color color = isSolid ? Color.red : Color.blue;
                 DrawQuadGizmos(quad, color);

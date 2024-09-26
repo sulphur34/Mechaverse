@@ -5,31 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2173bd-3974-4999-8524-d498470d59bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/DestructibleSpriteEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/DestructibleSpriteEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/DestructableSprite.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/DestructableSprite.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/Quad.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/Quad.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadEnumerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadEnumerator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadTree.Editor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadTree.Editor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadTree.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadTree.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/SpriteData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/SpriteData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem/MeshConstructionHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem/MeshConstructionHelper.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem/MeshGeneratorEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem/MeshGeneratorEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem/MeshGeneratorExample.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem/MeshGeneratorExample.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem/VertexData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem/VertexData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem/VertexUtility.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem/VertexUtility.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/DustTrail.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/DustTrail.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Levels/DesertArena.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Levels/DesertArena.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Materials/EmissionSprite.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Materials/EmissionSprite.shader.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/EnergyCell@4x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/EnergyCell@4x.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Gliders@4x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Gliders@4x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/DestructableSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/DestructableSprite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/Quad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/Quad.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadEnumerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadEnumerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadTree.Editor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadTree.Editor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/SpriteData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/SpriteData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Bepser Dragoon.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Hovers/Bepser Dragoon.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Particles/Ресурс 12@4x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Particles/Ресурс 12@4x.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Sprites/Ресурс 4CelticKnot.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Sprites/Ресурс 4CelticKnot.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +68,7 @@
   &quot;keyToString&quot;: {
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.4135021&quot;,
     &quot;git-widget-placeholder&quot;: &quot;feature/sprite-destruction&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -115,10 +113,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1640">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="1640" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -160,7 +158,9 @@
       <workItem from="1726909631306" duration="3340000" />
       <workItem from="1727080054642" duration="609000" />
       <workItem from="1727166371219" duration="1930000" />
-      <workItem from="1727258516531" duration="15074000" />
+      <workItem from="1727258516531" duration="16963000" />
+      <workItem from="1727280086211" duration="682000" />
+      <workItem from="1727343194605" duration="11796000" />
     </task>
     <servers />
   </component>

@@ -23,7 +23,7 @@ namespace SpriteDestructionSystem
 
                 if (_current.TryGetChildren(out Quad[] children))
                 {
-                    foreach (var child in children)
+                    foreach (Quad child in children)
                     {
                         _quadsToIterate.Push(child);
                     }
@@ -51,7 +51,7 @@ namespace SpriteDestructionSystem
 
         public Quad Current => _current;
 
-        object IEnumerator.Current => _current;
+        object IEnumerator.Current => Current;
 
         public void Dispose()
         {
