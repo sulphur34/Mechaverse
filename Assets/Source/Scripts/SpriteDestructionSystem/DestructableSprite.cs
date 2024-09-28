@@ -15,6 +15,7 @@ namespace SpriteDestructionSystem
         private void Awake()
         {
             GenerateSprite();
+            GetComponent<MeshCollider>().sharedMesh = _meshFilter.sharedMesh;
         }
 
         private void OnDrawGizmosSelected()

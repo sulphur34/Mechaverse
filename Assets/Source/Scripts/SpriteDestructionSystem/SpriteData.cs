@@ -46,6 +46,22 @@ namespace SpriteDestructionSystem
             }
         }
 
+        public void DestroySprite(int centerX, int centerY, int range)
+        {
+            int xOrigin = Mathf.Max(0, centerX - range);
+            int xEnd =  Mathf.Min(_width-1,centerX + range);
+            int yOrigin = Mathf.Max(0,centerY - range);
+            int yEnd =  Mathf.Min(_height-1, centerY + range);
+
+            for (int x = xOrigin; x < xEnd; x++)
+            {
+                for (int y = yOrigin; y < yEnd; y++)
+                {
+                    _points[x,y] = false;
+                }
+            }
+        }
+
         public bool IsQuadUniform(Quad quad)
         {
             bool isOriginSolid = _points[quad.XAdress, quad.YAdress];
