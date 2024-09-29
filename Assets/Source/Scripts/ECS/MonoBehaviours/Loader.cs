@@ -13,8 +13,6 @@ namespace ECS
         [SerializeField] private WeaponInitData _mainWeaponInitData;
         [SerializeField] private TurretInitData _turretInitData;
         [SerializeField] private PickUpsInitData _pickUpsInitData;
-
-
         [SerializeField] private Transform _spawnPoint;
 
         private EcsWorld _world;
@@ -59,7 +57,7 @@ namespace ECS
             _fixedUpdateSystems.Add(new HealthDamageSystem());
             _fixedUpdateSystems.Add(new CameraDistanceSystem());
             //_updateSystems.Add(new PlayerMoveSystem());
-            //_systems.Add(new AnimatedCharacterSystem());w
+            //_systems.Add(new AnimatedCharacterSystem());
             _fixedUpdateSystems.Add(new OnCollisionObjectDestroySystem());
             _fixedUpdateSystems.Add(new CollisionComponentDestructionSystem());
 

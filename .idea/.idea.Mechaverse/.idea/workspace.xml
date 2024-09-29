@@ -5,33 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2173bd-3974-4999-8524-d498470d59bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Input/ShootInputComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Input/ShootInputComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerFireWeaponSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/PlayerFireWeaponSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ShootInputSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ShootInputSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Trigonometry/Trigonometry.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Trigonometry/Trigonometry.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Projectile.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Projectile.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Weapon.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Weapon.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Materials/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Materials/New Material.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/WeaponInitData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/WeaponInitData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/UnitActor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/EntityActors/UnitActor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/Loader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      =======
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Materials/Particle/Blob.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Materials/Particle/Blob.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Materials/Particle/Triangle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Materials/Particle/Triangle.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/Burst.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/Burst.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      &gt;&gt;&gt;&gt;&gt;&gt;&gt; Stashed changes
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem/VertexUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/MeshGenerationSystem/VertexUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/DestructableSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/DestructableSprite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/SpriteData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/SpriteData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,28 +27,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1899c5bd2a6d466081cd705bee01d689955800/ab/c5038fc9/InspectorElement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1899c5bd2a6d466081cd705bee01d689955800/ae/eb922552/Editor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/9c/3692b5b4/Behaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/b0/4b90c8cd/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/c4/2b167987/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/d0/aec1d7e8/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/DestructibleSpriteEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ShootInputSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/Utilitiy/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs@1213c31c9e/src/EcsEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs@1213c31c9e/src/EcsFilter.cs" root0="SKIP_HIGHLIGHTING" />
@@ -87,7 +55,8 @@
   &quot;keyToString&quot;: {
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ecs&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.4135021&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/sprite-destruction&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -176,6 +145,11 @@
       <workItem from="1726909631306" duration="3340000" />
       <workItem from="1727080054642" duration="609000" />
       <workItem from="1727166371219" duration="1930000" />
+      <workItem from="1727258516531" duration="16963000" />
+      <workItem from="1727280086211" duration="682000" />
+      <workItem from="1727343194605" duration="13035000" />
+      <workItem from="1727433704861" duration="8476000" />
+      <workItem from="1727512471634" duration="6239000" />
     </task>
     <servers />
   </component>
@@ -262,17 +236,30 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs</url>
-          <line>48</line>
-          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Init\GameInitSystem.cs" containingFunctionPresentation="Method 'Init'">
+          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadTree.cs</url>
+          <line>21</line>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\SpriteDestructionSystem\QuadTree.cs" containingFunctionPresentation="Method 'InitializeQuad'">
             <startOffsets>
-              <option value="1609" />
+              <option value="542" />
             </startOffsets>
             <endOffsets>
-              <option value="1805" />
+              <option value="592" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="16" />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadTree.cs</url>
+          <line>39</line>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\SpriteDestructionSystem\QuadTree.cs" containingFunctionPresentation="Method 'InitializeQuad'">
+            <startOffsets>
+              <option value="1139" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1140" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
