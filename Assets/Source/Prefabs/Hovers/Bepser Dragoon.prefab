@@ -124,7 +124,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8636744584416286955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1767108240186915740
+--- !u!1001 &4107937679131510676
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -132,64 +132,64 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8636744584416286955}
     m_Modifications:
-    - target: {fileID: 975600444475453839, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+    - target: {fileID: 975600444475453839, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 975600444475453839, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+    - target: {fileID: 975600444475453839, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 975600444475453839, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+    - target: {fileID: 975600444475453839, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 975600444475453839, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+    - target: {fileID: 975600444475453839, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 975600444475453839, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+    - target: {fileID: 975600444475453839, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 975600444475453839, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+    - target: {fileID: 975600444475453839, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 975600444475453839, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+    - target: {fileID: 975600444475453839, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 975600444475453839, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+    - target: {fileID: 975600444475453839, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 975600444475453839, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+    - target: {fileID: 975600444475453839, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 975600444475453839, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+    - target: {fileID: 975600444475453839, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 975600444475455090, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+    - target: {fileID: 975600444475455090, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
       propertyPath: m_Name
-      value: Burst
+      value: CollisionBust
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
---- !u!198 &1516588255098538512 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
+--- !u!198 &3785368818654623256 stripped
 ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 975600444475453836, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
-  m_PrefabInstance: {fileID: 1767108240186915740}
+  m_CorrespondingSourceObject: {fileID: 975600444475453836, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
+  m_PrefabInstance: {fileID: 4107937679131510676}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1516588255098538515 stripped
+--- !u!4 &3785368818654623259 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 975600444475453839, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
-  m_PrefabInstance: {fileID: 1767108240186915740}
+  m_CorrespondingSourceObject: {fileID: 975600444475453839, guid: 7d3f782972ee39442bb2974dd354157f, type: 3}
+  m_PrefabInstance: {fileID: 4107937679131510676}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6986269926465773877
 PrefabInstance:
@@ -254,9 +254,6 @@ PrefabInstance:
       addedObject: {fileID: 906171600527823267}
     - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1516588255098538515}
-    - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6889836451894156033}
     - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
       insertIndex: -1
@@ -264,6 +261,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3064734945930845731}
+    - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3785368818654623259}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 8beb9ddd8af0cb74c90b7a4763e881e8, type: 3}
       insertIndex: -1
@@ -746,7 +746,7 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 308831348782391470}
   <Rigidbody2D>k__BackingField: {fileID: 1190786265766457598}
   <MoveParticleSystem>k__BackingField: {fileID: 1829373236425016001}
-  <CollisionParticleSystem>k__BackingField: {fileID: 1516588255098538512}
+  <CollisionParticleSystem>k__BackingField: {fileID: 3785368818654623256}
   <SpriteRenderer>k__BackingField: {fileID: 0}
   <TurretPlaceholders>k__BackingField:
   - {fileID: 1686553567565792075}

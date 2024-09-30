@@ -25,5 +25,5 @@ MonoBehaviour:
   <RotationData>k__BackingField:
     maxSpeed: 0
     acceleration: 0
-  <DefaultSpeed>k__BackingField: 1
+  <DefaultSpeed>k__BackingField: 5
   <HealthValue>k__BackingField: 50
