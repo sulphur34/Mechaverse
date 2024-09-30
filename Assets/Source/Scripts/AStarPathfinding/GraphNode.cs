@@ -15,11 +15,24 @@ namespace AStarPathfinding
         public int CostDistanceFromGoal;
         public int TotalCost;
         public int PickOrder;
-        public int IsCostCalculated;
+        public bool IsCostCalculated;
 
         public GraphNode(Vector2Int position)
         {
             Position = position;
+        }
+
+        public void CalculateCost(Vector2Int position, Vector2Int destination)
+        {
+            if(IsCostCalculated)
+                return;
+
+            CostDistanceFromStart = Mathf.Abs(Position.x - position.x) + Mathf.Abs(Position.y - position.y);
+            CostDistanceFromGoal = Mathf.Abs(Position.x - destination.x) + Mathf.Abs(Position.y - destination.y);
+
+            TotalCost = CostDistanceFromStart + CostDistanceFromGoal;
+
+            IsCostCalculated = true;
         }
     }
 }
