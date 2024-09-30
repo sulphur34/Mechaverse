@@ -1,12 +1,13 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace AStarPathfinding
 {
     public class GraphDebugger : MonoBehaviour
     {
-        private int _gridSizeX = 96;
-        private int _gridSizeY = 96;
+        private int _gridSizeX = 10;
+        private int _gridSizeY = 10;
 
         private GraphNode[,] _grid;
         private GraphNode _startNode;
@@ -15,11 +16,13 @@ namespace AStarPathfinding
         private Vector3 _startPositionDebug = new Vector3(1000, 0, 0);
         private Vector3 _destinationPositionDebug = new Vector3(1000, 0, 0);
 
+        private List<GraphNode> _nodesToCheck = new List<GraphNode>();
+        private List<GraphNode> _nodesChecked = new List<GraphNode>();
+
         private void Start()
         {
             CreateGrid();
-
-            FindPath(new Vector2(41, 72));
+            FindPath(new Vector2(20, 20));
         }
 
         private void CreateGrid()
@@ -31,6 +34,10 @@ namespace AStarPathfinding
                 for (int y = 0; y < _gridSizeY; y++)
                 {
                     _grid[x, y] = new GraphNode(new Vector2Int(x, y));
+
+                    Vector3 position = ConvertGridPositionToWorldPosition(_grid[x, y]);
+                    Collider2D hitCollider2D = Physics2D.OverlapCircle(position, _cellSize / 2.0f);
+                    _grid[x, y].IsObstacle = hitCollider2D != null;
                 }
             }
 
@@ -38,15 +45,6 @@ namespace AStarPathfinding
             {
                 for (int y = 0; y < _gridSizeY; y++)
                 {
-                    Vector3 position = ConvertGridPositionToWorldPosition(_grid[x, y]);
-                    Collider2D hitCollider2D = Physics2D.OverlapCircle(position, _cellSize / 2.0f);
-
-                    if (hitCollider2D != null)
-                    {
-                        _grid[x, y].IsObstacle = true;
-                        continue;
-                    }
-
                     _grid[x, y].Neighbors = GetNeighbours(x, y);
                 }
             }
@@ -54,7 +52,7 @@ namespace AStarPathfinding
 
         private List<Vector2> FindPath(Vector2 destination)
         {
-            if(_grid == null)
+            if (_grid == null)
                 return null;
 
             Vector2Int destinationOnGrid = ConvertWorldPositionToGridPosition(destination);
@@ -66,12 +64,69 @@ namespace AStarPathfinding
 
             _startPositionDebug = ConvertGridPositionToWorldPosition(_startNode);
 
+            GraphNode currentNode = _startNode;
+
+            bool isDoneFindingPath = false;
+            int pickOrder = 1;
+
+            while (!isDoneFindingPath)
+            {
+                _nodesToCheck.Remove(currentNode);
+                currentNode.PickOrder = pickOrder;
+                pickOrder++;
+                _nodesChecked.Add(currentNode);
+
+                if (currentNode.Position == destinationOnGrid)
+                {
+                    isDoneFindingPath = currentNode.Position == destinationOnGrid;
+                    break;
+                }
+
+                CalculateCostForNodeAndNeighbours(currentNode, currentGridPosition, destinationOnGrid);
+
+                foreach (var neighbor in currentNode.Neighbors)
+                {
+                    if (_nodesChecked.Contains(neighbor))
+                        continue;
+
+                    if (_nodesToCheck.Contains(neighbor))
+                        continue;
+
+                    _nodesToCheck.Add(neighbor);
+                }
+
+                _nodesToCheck = _nodesToCheck
+                    .OrderBy(x => x.TotalCost)
+                    .ThenBy(y => y.CostDistanceFromGoal)
+                    .ToList();
+
+                if (_nodesToCheck.Count == 0)
+                    return null;
+
+                currentNode = _nodesToCheck[0];
+            }
+
             return null;
+        }
+
+        private void CreatePath()
+        {
+            
+        }
+
+        private void CalculateCostForNodeAndNeighbours(GraphNode node, Vector2Int position, Vector2Int destination)
+        {
+            node.CalculateCost(position, destination);
+
+            foreach (var neighbor in node.Neighbors)
+            {
+                neighbor.CalculateCost(position, destination);
+            }
         }
 
         private GraphNode GetNodeFromPoint(Vector2Int point)
         {
-            if(!IsPointWithingGrid(point))
+            if (!IsPointWithingGrid(point))
                 return null;
 
             return _grid[point.x, point.y];
@@ -110,7 +165,7 @@ namespace AStarPathfinding
 
         private Vector2Int ConvertWorldPositionToGridPosition(Vector2 gridPosition)
         {
-            return new Vector2Int(Mathf.RoundToInt(gridPosition.x / _cellSize + _gridSizeX / 2.0f),Mathf.RoundToInt(
+            return new Vector2Int(Mathf.RoundToInt(gridPosition.x / _cellSize + _gridSizeX / 2.0f), Mathf.RoundToInt(
                 gridPosition.y / _cellSize + _gridSizeY / 2.0f));
         }
 
@@ -129,11 +184,23 @@ namespace AStarPathfinding
                 }
             }
 
+            foreach (var node in _nodesToCheck)
+            {
+                Gizmos.color = Color.yellow;
+                Gizmos.DrawSphere(ConvertGridPositionToWorldPosition(node), _cellSize / 2f);
+            }
+
+            foreach (var node in _nodesChecked)
+            {
+                Gizmos.color = Color.green;
+                Gizmos.DrawSphere(ConvertGridPositionToWorldPosition(node), _cellSize / 2f);
+            }
+
             Gizmos.color = Color.black;
-            Gizmos.DrawSphere(_startPositionDebug, _cellSize/2f);
+            Gizmos.DrawSphere(_startPositionDebug, _cellSize / 2f);
 
             Gizmos.color = Color.red;
-            Gizmos.DrawSphere(_destinationPositionDebug, _cellSize/2f);
+            Gizmos.DrawSphere(_destinationPositionDebug, _cellSize / 2f);
         }
     }
 }
