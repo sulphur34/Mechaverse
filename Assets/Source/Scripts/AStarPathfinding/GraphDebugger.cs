@@ -19,6 +19,8 @@ namespace AStarPathfinding
         private List<GraphNode> _nodesToCheck = new List<GraphNode>();
         private List<GraphNode> _nodesChecked = new List<GraphNode>();
 
+        private List<Vector2> _resultPath = new List<Vector2>();
+
         private void Start()
         {
             CreateGrid();
@@ -106,12 +108,56 @@ namespace AStarPathfinding
                 currentNode = _nodesToCheck[0];
             }
 
+            _resultPath = CreatePath(currentGridPosition);
+
             return null;
         }
 
-        private void CreatePath()
+        private List<Vector2> CreatePath(Vector2Int currentGridPosition)
         {
-            
+            List<Vector2> resultPath = new List<Vector2>();
+            List<GraphNode> path = new List<GraphNode>();
+            bool isPathCreated = false;
+
+            _nodesChecked.Reverse();
+
+            GraphNode currentNode = _nodesChecked[0];
+            path.Add(currentNode);
+
+            int attempts = 0;
+
+            while (!isPathCreated)
+            {
+                attempts++;
+
+                if (attempts > 1000)
+                    break;
+
+                currentNode.Neighbors = currentNode.Neighbors.OrderBy(x => x.PickOrder).ToList();
+
+                foreach (var neighbor in currentNode.Neighbors)
+                {
+                    if (!path.Contains(neighbor) && _nodesChecked.Contains(neighbor))
+                    {
+                        path.Add(neighbor);
+                        currentNode = neighbor;
+
+                        break;
+                    }
+                }
+
+                if(currentNode == _startNode)
+                    isPathCreated = true;
+            }
+
+            foreach (var node in path)
+            {
+                resultPath.Add(ConvertGridPositionToWorldPosition(node));
+            }
+
+            resultPath.Reverse();
+
+            return resultPath;
         }
 
         private void CalculateCostForNodeAndNeighbours(GraphNode node, Vector2Int position, Vector2Int destination)
@@ -194,6 +240,18 @@ namespace AStarPathfinding
             {
                 Gizmos.color = Color.green;
                 Gizmos.DrawSphere(ConvertGridPositionToWorldPosition(node), _cellSize / 2f);
+            }
+
+            Vector3 lastPosition = Vector3.zero;
+            bool isFirstStep = true;
+
+            foreach (var point in _resultPath)
+            {
+                if(!isFirstStep)
+                    Gizmos.DrawLine(lastPosition, point);
+
+                lastPosition = point;
+                isFirstStep = false;
             }
 
             Gizmos.color = Color.black;
