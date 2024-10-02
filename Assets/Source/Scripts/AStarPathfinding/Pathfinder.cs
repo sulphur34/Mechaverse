@@ -29,9 +29,7 @@ namespace AStarPathfinding
 
             Vector2Int destinationOnGrid = _grid.ConvertWorldPositionToGridPosition(destination);
             Vector2Int currentGridPosition = _grid.ConvertWorldPositionToGridPosition(position);
-            //_destinationPositionDebug = destination;
             _startNode = _grid.GetNodeFromPoint(currentGridPosition);
-            //_startPositionDebug = _grid.ConvertGridPositionToWorldPosition(_startNode.Position);
 
             GraphNode currentNode = _startNode;
 
