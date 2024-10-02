@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace AStarPathfinding
@@ -7,19 +8,25 @@ namespace AStarPathfinding
     {
         public readonly Vector2Int Position;
 
-        public List<GraphNode> Neighbors;
-
+        private List<GraphNode> _neighbors;
         public bool IsObstacle;
-
-        public int CostDistanceFromStart;
-        public int CostDistanceFromGoal;
-        public int TotalCost;
         public int PickOrder;
-        public bool IsCostCalculated;
 
         public GraphNode(Vector2Int position)
         {
             Position = position;
+        }
+
+        public int CostDistanceFromStart {get; private set;}
+        public int CostDistanceFromGoal {get; private set;}
+        public int TotalCost {get; private set;}
+        public bool IsCostCalculated {get; private set;}
+
+        public IReadOnlyList<GraphNode> Neighbors => _neighbors;
+
+        public void SetNeighbors(List<GraphNode> neighbors)
+        {
+            _neighbors = neighbors;
         }
 
         public void CalculateCost(Vector2Int position, Vector2Int destination)
@@ -33,6 +40,11 @@ namespace AStarPathfinding
             TotalCost = CostDistanceFromStart + CostDistanceFromGoal;
 
             IsCostCalculated = true;
+        }
+
+        public void OrderNeighbors()
+        {
+            _neighbors = _neighbors.OrderBy(x => x.PickOrder).ToList();
         }
     }
 }
