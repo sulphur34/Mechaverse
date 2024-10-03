@@ -15,7 +15,7 @@ MonoBehaviour:
   <ProjectilePrefab>k__BackingField: {fileID: 378551262113612071, guid: 52283ac788f2d2742a12fd0c3bb02f33, type: 3}
   <WeaponActor>k__BackingField: {fileID: 4434057871369946765, guid: 455664ed7ae64ce4da8893de6e6ca007, type: 3}
   <MagazineCapacity>k__BackingField: 50
-  <ShotDelay>k__BackingField: 1
+  <ShotDelay>k__BackingField: 0.1
   <ShotForce>k__BackingField: 30
   <ReloadingSpeed>k__BackingField: 5
   <DamageValue>k__BackingField: 2
