@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2173bd-3974-4999-8524-d498470d59bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Utilitiy/OffsetKeeper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Scripts/Utilitiy/OffsetKeeper.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Shaders/SpriteLit.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Shaders/SpriteLit.shader.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Materials/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Materials/New Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Color Palette.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Color Palette.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Materials/ShadowMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Materials/ShadowMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/AStarPathfinding/Pathfinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/AStarPathfinding/Pathfinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/PlayerUnitInitData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/PlayerUnitInitData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/TurretWeaponInitData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/TurretWeaponInitData.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,20 +55,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.4135021&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/pathfinding&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.4135021",
+    "git-widget-placeholder": "assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../Desktop/Mechaverse\Mechaverse.exe" />
@@ -152,7 +159,7 @@
       <workItem from="1727774894716" duration="9803000" />
       <workItem from="1727859432869" duration="18443000" />
       <workItem from="1727913349302" duration="825000" />
-      <workItem from="1727950578448" duration="743000" />
+      <workItem from="1727950578448" duration="7325000" />
     </task>
     <servers />
   </component>

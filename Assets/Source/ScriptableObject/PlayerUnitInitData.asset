@@ -18,7 +18,7 @@ MonoBehaviour:
     maxSpeedBackward: -10
     maxSpeedRight: 10
     maxSpeedLeft: -10
-    accelerationForward: 2
+    accelerationForward: 5
     accelerationBackward: 1
     accelerationSide: 1
     inertiaDamping: 1
