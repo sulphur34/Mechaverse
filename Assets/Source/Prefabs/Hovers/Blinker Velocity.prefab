@@ -522,8 +522,9 @@ MonoBehaviour:
   <MoveParticleSystem>k__BackingField: {fileID: 6566799526887538164, guid: 284bc5870f2264c49b2e3596a1a60479, type: 3}
   <CollisionParticleSystem>k__BackingField: {fileID: 975600444475453836, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
   <SpriteRenderer>k__BackingField: {fileID: 0}
-  <TurretPlaceholder>k__BackingField: {fileID: 0}
+  <TurretPlaceholders>k__BackingField: []
   <InternalColliders>k__BackingField: []
+  <FrontWeaponsPlaceholders>k__BackingField: []
 --- !u!95 &1553031145898973645
 Animator:
   serializedVersion: 5
@@ -570,7 +571,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &2803857868703385952
 MonoBehaviour:

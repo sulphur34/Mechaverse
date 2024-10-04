@@ -23,6 +23,7 @@ namespace Systems
         private readonly WeaponInitData _turretWeaponInitData;
         private readonly PickUpsInitData _pickUpsInitData;
         private readonly WeaponInitData _mainWeaponInitData;
+        private WeaponBuilder _weaponBuilder;
 
         public GameInitSystem(UnitInitData playerInitData,
             UnitInitData enemyInitData,
@@ -43,19 +44,24 @@ namespace Systems
 
         public void Init()
         {
+            _weaponBuilder = new WeaponBuilder(_world);
             var unitBuilder = new UnitBuilder(_world);
             var playerActor = unitBuilder.BuildPlayer(_playerInitData, _spawnPoint.position);
+            var turretBuilder = new TurretBuilder(_world);
+
             foreach (var weaponPlace in playerActor.FrontWeaponsPlaceholders)
             {
-                var weapon = CreateWeapon(
+                var weapon = _weaponBuilder.Build(
                     _mainWeaponInitData,
-                    _mainWeaponInitData.WeaponActor,
                     weaponPlace,
                     weaponPlace.position);
                 weapon.Get<ShootInputComponent>();
             }
 
-            CreateTurret(playerActor);
+            foreach (var placeholder in playerActor.TurretPlaceholders)
+            {
+                turretBuilder.CreateTurret(_turretInitData, placeholder, playerActor.Rigidbody2D);
+            }
 
             for (int i = 0; i < 20; i++)
             {
@@ -85,67 +91,6 @@ namespace Systems
             collisionObjectDestructionComponent.destroyObject = pickUpActor.gameObject;
         }
 
-        private void CreateTurret(UnitActor unitActor)
-        {
-            foreach (var placeholder in unitActor.TurretPlaceholders)
-            {
-                var turretActor = Object.Instantiate(
-                    _turretInitData.TurretPrefab,
-                    placeholder.transform.position,
-                    Quaternion.identity);
 
-                var turret = _world.NewEntity();
-                turretActor.HingeJoint.connectedBody = unitActor.Rigidbody2D;
-                turretActor.HingeJoint.anchor = Vector2.zero;
-                turretActor.HingeJoint.connectedAnchor = placeholder.transform.position;
-
-                ref var trackerComponent = ref turret.Get<TrackerComponent>();
-                trackerComponent.searchRadius = _turretInitData.TrackerRange;
-                trackerComponent.selfTeam = Teams.Player;
-                trackerComponent.selfTransform = turretActor.transform;
-
-                ref var rotatableComponent = ref turret.Get<RigidbodyRotatableComponent>();
-                rotatableComponent.rigidbody = turretActor.Rigidbody2D;
-                rotatableComponent.rotationData = _playerInitData.RotationData;
-
-                ref var detectionComponent = ref turret.Get<DetectionComponent>();
-                detectionComponent.angle = _turretInitData.DetectAngle;
-                detectionComponent.radius = _turretInitData.DetectRadius;
-
-                turret.Get<FollowComponent>();
-
-                ref var turretComponent = ref turret.Get<TurretComponent>();
-
-                turretComponent.weapons = new List<EcsEntity>();
-                foreach (var position in turretActor.WeaponPositions)
-                {
-                    var weapon = CreateWeapon(_turretWeaponInitData, turretActor.WeaponActor, turretActor.transform,
-                        position);
-                    turretComponent.weapons.Add(weapon);
-                }
-            }
-        }
-
-        private EcsEntity CreateWeapon(WeaponInitData weaponInitData, WeaponActor weaponPrefab, Transform container,
-            Vector2 position)
-        {
-            var weaponActor = Object.Instantiate(weaponPrefab, container);
-            weaponActor.transform.position = position;
-            var weapon = _world.NewEntity();
-
-            ref var weaponComponent = ref weapon.Get<WeaponComponent>();
-            weaponComponent.projectile = weaponInitData.ProjectilePrefab;
-            weaponComponent.reloadingSpeed = weaponInitData.ReloadingSpeed;
-            weaponComponent.shotDelay = weaponInitData.ShotDelay;
-            weaponComponent.shotForce = weaponInitData.ShotForce;
-            weaponComponent.shootingPoint = weaponActor.ShootPoint;
-            weaponComponent.damageValue = weaponInitData.DamageValue;
-
-            ref var ammoComponent = ref weapon.Get<AmmoComponent>();
-            ammoComponent.maxCapacity = weaponInitData.MagazineCapacity;
-            ammoComponent.currentCapacity = ammoComponent.maxCapacity;
-
-            return weapon;
-        }
     }
 }
