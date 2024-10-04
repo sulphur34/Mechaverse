@@ -1,7 +1,8 @@
+using Data;
 using EntityActors;
 using UnityEngine;
 
-namespace Data
+namespace ECS.Data
 {
     [CreateAssetMenu(menuName = "UnitInitData")]
     public class UnitInitData : ScriptableObject
