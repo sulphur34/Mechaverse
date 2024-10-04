@@ -2,6 +2,7 @@ using Data;
 using ECS.Components;
 using ECS.Components.Input;
 using ECS.Components.Movement;
+using ECS.Data;
 using ECS.MonoBehaviours;
 using EntityActors;
 using Leopotam.Ecs;

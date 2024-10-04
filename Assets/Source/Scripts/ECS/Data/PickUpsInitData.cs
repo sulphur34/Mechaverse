@@ -7,6 +7,6 @@ namespace Data
     public class PickUpsInitData : ScriptableObject
     {
         [field: SerializeField] public PickUpActor PickUpActor { get; private set; }
-        [field: SerializeField] public float HaalthRestoreValue { get; private set; }
+        [field: SerializeField] public float HealthRestoreValue { get; private set; }
     }
 }

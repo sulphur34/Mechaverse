@@ -3,6 +3,7 @@ using Data;
 using ECS.Components;
 using ECS.Components.Input;
 using ECS.Components.Movement;
+using ECS.Data;
 using ECS.MonoBehaviours;
 using EntityActors;
 using Leopotam.Ecs;
@@ -24,6 +25,8 @@ namespace Systems
         private readonly PickUpsInitData _pickUpsInitData;
         private readonly WeaponInitData _mainWeaponInitData;
         private WeaponBuilder _weaponBuilder;
+        private TurretBuilder _turretBuilder;
+        private PickUpBuilder _pickUpBuilder;
 
         public GameInitSystem(UnitInitData playerInitData,
             UnitInitData enemyInitData,
@@ -45,52 +48,37 @@ namespace Systems
         public void Init()
         {
             _weaponBuilder = new WeaponBuilder(_world);
-            var unitBuilder = new UnitBuilder(_world);
-            var playerActor = unitBuilder.BuildPlayer(_playerInitData, _spawnPoint.position);
-            var turretBuilder = new TurretBuilder(_world);
+            _turretBuilder = new TurretBuilder(_world);
+            var unitBuilder= new UnitBuilder(_world);
+            var pickUpBuilder = new PickUpBuilder(_world);
 
-            foreach (var weaponPlace in playerActor.FrontWeaponsPlaceholders)
-            {
-                var weapon = _weaponBuilder.Build(
-                    _mainWeaponInitData,
-                    weaponPlace,
-                    weaponPlace.position);
-                weapon.Get<ShootInputComponent>();
-            }
-
-            foreach (var placeholder in playerActor.TurretPlaceholders)
-            {
-                turretBuilder.CreateTurret(_turretInitData, placeholder, playerActor.Rigidbody2D);
-            }
+            var playerActor = CreatePlayer(unitBuilder);
 
             for (int i = 0; i < 20; i++)
             {
                 var enemySpawnPosition = _spawnPoint.position +
                                          new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0f);
                 unitBuilder.BuildEnemy(_enemyInitData, enemySpawnPosition, playerActor.transform);
-                CreatePickUps();
+                pickUpBuilder.Build(_pickUpsInitData, _spawnPoint.position);
             }
         }
 
-        private void CreatePickUps()
+        private UnitActor CreatePlayer(UnitBuilder builder)
         {
-            var pickUpSpawnPosition = _spawnPoint.position +
-                                      new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0f);
-            var pickUpActor =
-                Object.Instantiate(_pickUpsInitData.PickUpActor, pickUpSpawnPosition, Quaternion.identity);
-            var pickUp = _world.NewEntity();
-            pickUpActor.GetComponent<ColliderObserver>().Initialize(_world, pickUp);
+            var playerActor = builder.BuildPlayer(_playerInitData, _spawnPoint.position);
 
-            ref var healthRefillComponent = ref pickUp.Get<HealthRefillComponent>();
-            healthRefillComponent.refillAmount = _pickUpsInitData.HaalthRestoreValue;
+            foreach (var weaponPlace in playerActor.FrontWeaponsPlaceholders)
+            {
+                var weapon = _weaponBuilder.Build(_mainWeaponInitData, weaponPlace, weaponPlace.position);
+                weapon.Get<ShootInputComponent>();
+            }
 
-            ref var collisionParticleComponent = ref pickUp.Get<InstanceCollisionParticleComponent>();
-            collisionParticleComponent.particleSystem = pickUpActor.CollisionParticleSystem;
+            foreach (var placeholder in playerActor.TurretPlaceholders)
+            {
+                _turretBuilder.CreateTurret(_turretInitData, placeholder, playerActor.Rigidbody2D);
+            }
 
-            ref var collisionObjectDestructionComponent = ref pickUp.Get<CollisionObjectDestructionComponent>();
-            collisionObjectDestructionComponent.destroyObject = pickUpActor.gameObject;
+            return playerActor;
         }
-
-
     }
 }
