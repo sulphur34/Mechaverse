@@ -24,14 +24,18 @@ namespace AStarPathfinding
 
         public Vector2Int ConvertWorldPositionToGridPosition(Vector2 gridPosition)
         {
-            return new Vector2Int(Mathf.RoundToInt(gridPosition.x / GridData.CellSize.x + GridData.GridSize.x / 2.0f), Mathf.RoundToInt(
-                gridPosition.y / GridData.CellSize.y + GridData.GridSize.y / 2.0f));
+            return new Vector2Int(Mathf.RoundToInt(gridPosition.x / GridData.CellSize.x + GridData.GridSize.x / 2.0f),
+                Mathf.RoundToInt(
+                    gridPosition.y / GridData.CellSize.y + GridData.GridSize.y / 2.0f));
         }
 
         public Vector3 ConvertGridPositionToWorldPosition(Vector2Int gridPosition)
         {
-            return new Vector3(_meshTransform.position.x + gridPosition.x * GridData.CellSize.x - (GridData.GridSize.x * GridData.CellSize.x) / 2.0f,
-                _meshTransform.position.y + gridPosition.y * GridData.CellSize.y - (GridData.GridSize.y * GridData.CellSize.y) / 2.0f, 0f);
+            return new Vector3(
+                _meshTransform.position.x + gridPosition.x * GridData.CellSize.x -
+                (GridData.GridSize.x * GridData.CellSize.x) / 2.0f,
+                _meshTransform.position.y + gridPosition.y * GridData.CellSize.y -
+                (GridData.GridSize.y * GridData.CellSize.y) / 2.0f, 0f);
         }
 
         public GraphNode GetNodeFromPoint(Vector2Int point)
@@ -77,21 +81,32 @@ namespace AStarPathfinding
         private List<GraphNode> GetNeighbours(int x, int y)
         {
             var neighbours = new List<GraphNode>();
+            for (int i = -1; i <= 1; i++)
+            {
+                for (int j = -1; j <= 1; j++)
+                {
+                    if (i == 0 && j == 0)
+                        continue;
 
-            AddNeighbour(neighbours, x - 1, y);
-            AddNeighbour(neighbours, x + 1, y);
-            AddNeighbour(neighbours, x, y - 1);
-            AddNeighbour(neighbours, x, y + 1);
+                    AddNeighbour(neighbours, x + i, y + j);
+                }
+            }
 
             return neighbours;
         }
 
         private void AddNeighbour(List<GraphNode> neighbours, int newX, int newY)
         {
-            if (newX >= 0 && newX < GridData.GridSize.x && newY >= 0 && newY < GridData.GridSize.y && !_grid[newX, newY].IsObstacle)
-            {
-                neighbours.Add(_grid[newX, newY]);
-            }
+            if (newX < 0 || newX >= GridData.GridSize.x)
+                return;
+
+            if (newY < 0 || newY >= GridData.GridSize.y)
+                return;
+
+            if (_grid[newX, newY].IsObstacle)
+                return;
+
+            neighbours.Add(_grid[newX, newY]);
         }
     }
 }
