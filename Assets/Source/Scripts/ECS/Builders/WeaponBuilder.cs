@@ -5,13 +5,10 @@ using UnityEngine;
 
 namespace Systems
 {
-    public class WeaponBuilder
+    public class WeaponBuilder : EcsBuilder
     {
-        private EcsWorld _world;
-
-        public WeaponBuilder(EcsWorld world)
+        public WeaponBuilder(EcsWorld world) : base(world)
         {
-            _world = world;
         }
 
         public EcsEntity Build(WeaponInitData weaponInitData, Transform container,

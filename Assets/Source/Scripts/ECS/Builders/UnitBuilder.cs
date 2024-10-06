@@ -12,16 +12,13 @@ using Utilitiy;
 
 namespace Systems
 {
-    public class UnitBuilder
+    public class UnitBuilder : EcsBuilder
     {
-        private readonly EcsWorld _world;
-
         private UnitActor _unitActor;
         private EcsEntity _entity;
 
-        public UnitBuilder(EcsWorld world)
+        public UnitBuilder(EcsWorld world) : base(world)
         {
-            _world = world;
         }
 
         public UnitActor BuildPlayer(UnitInitData unitInitData, Vector3 spawnPoint)

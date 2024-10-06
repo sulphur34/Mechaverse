@@ -7,13 +7,10 @@ using UnityEngine;
 
 namespace Systems
 {
-    public class PickUpBuilder
+    public class PickUpBuilder : EcsBuilder
     {
-        private EcsWorld _world;
-
-        public PickUpBuilder(EcsWorld world)
+        public PickUpBuilder(EcsWorld world) : base(world)
         {
-            _world = world;
         }
 
         public void Build(PickUpsInitData initData, Vector3 spawnPoint)
