@@ -54,6 +54,7 @@ namespace ECS
             _fixedUpdateSystems.Add(new SelfCollisionParticleSystem());
             _fixedUpdateSystems.Add(new InstanceCollisionParticleSystem());
             _fixedUpdateSystems.Add(new ShootingSystem());
+            _fixedUpdateSystems.Add(new RigidbodyInstantMoveSystem());
             _fixedUpdateSystems.Add(new CollisionDamageSystem());
             _fixedUpdateSystems.Add(new HealthDamageSystem());
             _fixedUpdateSystems.Add(new CameraDistanceSystem());

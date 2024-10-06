@@ -14,7 +14,7 @@ namespace Systems
             {
                 ref var projectile = ref _filter.Get2(i);
 
-                Object.Destroy(projectile.rigidbody2D.gameObject);
+                Object.Destroy(projectile.projectile);
                 _filter.GetEntity(i).Destroy();
             }
         }

@@ -1,4 +1,5 @@
 using ECS.Components;
+using ECS.Components.Movement;
 using ECS.MonoBehaviours;
 using Leopotam.Ecs;
 using UnityEngine;
@@ -20,12 +21,15 @@ namespace Systems
 
             projectileEntity.Get<CollisionDestructionComponent>();
 
+            ref var projectileComponent = ref projectileEntity.Get<ProjectileComponent>();
+            projectileComponent.projectile = projectile.gameObject;
+
             ref var particleComponent = ref projectileEntity.Get<InstanceCollisionParticleComponent>();
             particleComponent.particleSystem = projectile.CollisionParticleSystem;
 
-            ref var projectileComponent = ref projectileEntity.Get<ProjectileComponent>();
-            projectileComponent.rigidbody2D = projectile.Rigidbody2D;
-            projectileComponent.rigidbody2D.AddForce(weapon.shootingPoint.transform.up * weapon.shotForce);
+            ref var movableComponent = ref projectileEntity.Get<RigidbodyInstantMovableComponent>();
+            movableComponent.rigidbody = projectile.Rigidbody2D;
+            movableComponent.velocity = weapon.shootingPoint.transform.up * weapon.shotForce;
 
             ref var collisionObjectDestructionComponent = ref projectileEntity.Get<CollisionObjectDestructionComponent>();
             collisionObjectDestructionComponent.destroyObject = projectile.gameObject;
