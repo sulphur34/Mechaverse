@@ -1,6 +1,5 @@
 using ECS.Components;
 using Leopotam.Ecs;
-using UnityEngine;
 
 namespace Systems
 {
@@ -18,6 +17,9 @@ namespace Systems
 
                 if (health.currentValue <= health.minValue)
                 {
+                    ref var destruction = ref entity.Get<DestructionComponent>();
+                    destruction.destroyObject = health.unit;
+
                     entity.Del<FollowComponent>();
                     entity.Del<TargetableComponent>();
                     continue;

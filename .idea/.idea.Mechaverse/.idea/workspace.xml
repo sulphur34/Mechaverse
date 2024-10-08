@@ -6,11 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="cc2173bd-3974-4999-8524-d498470d59bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/Burst.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/Burst.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/CollisionBust.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/CollisionBust.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/BlasterProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/BlasterProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/CannonProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/CannonProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Builders/PickUpBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Builders/PickUpBuilder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Builders/ProjectileBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Builders/ProjectileBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Weapon/ProjectileComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Weapon/ProjectileComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Builders/UnitBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Builders/UnitBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Collisions/CollisionObjectDestructionComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Collisions/DestructionComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Collisions/CollisionObjectDestructionComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/Collisions/DestructionComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/HealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Components/HealthComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/MonoBehaviours/Loader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionSystems/OnCollisionObjectDestroySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionSystems/DestroySystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionSystems/OnCollisionObjectDestroySystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionSystems/DestroySystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionSystems/ProjectileCollisionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionSystems/ProjectileCollisionSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/RigidbodyInstantMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/MoveSystems/RigidbodyInstantMoveSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/HealthSystems/HealthDamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/HealthSystems/HealthDamageSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,10 +111,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7144">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="7144" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -177,42 +189,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/CollisionSystems/ProjectileCollisionSystem.cs</url>
-          <line>14</line>
-          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\ProjectileCollisionSystem.cs" containingFunctionPresentation="Method 'Run'">
-            <startOffsets>
-              <option value="343" />
-            </startOffsets>
-            <endOffsets>
-              <option value="384" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/WeaponSystems/ShootingSystem.cs</url>
-          <line>27</line>
-          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\ShootingSystem.cs" containingFunctionPresentation="Method 'Run'">
-            <startOffsets>
-              <option value="788" />
-            </startOffsets>
-            <endOffsets>
-              <option value="843" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/WeaponSystems/RechargingSystem.cs</url>
           <line>15</line>
-          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\RechargingSystem.cs" containingFunctionPresentation="Method 'Run'">
-            <startOffsets>
-              <option value="347" />
-            </startOffsets>
-            <endOffsets>
-              <option value="391" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\RechargingSystem.cs" containingFunctionPresentation="Method 'Run'" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
@@ -231,14 +210,7 @@
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/TrackingSystems/TrackingSystem.cs</url>
           <line>15</line>
-          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\TrackingSystem.cs" containingFunctionPresentation="Method 'Run'">
-            <startOffsets>
-              <option value="398" />
-            </startOffsets>
-            <endOffsets>
-              <option value="448" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\TrackingSystem.cs" containingFunctionPresentation="Method 'Run'" />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
@@ -266,6 +238,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/WeaponSystems/ShootingSystem.cs</url>
+          <line>16</line>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\WeaponSystems\ShootingSystem.cs" containingFunctionPresentation="Method 'Run'">
+            <startOffsets>
+              <option value="399" />
+            </startOffsets>
+            <endOffsets>
+              <option value="440" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -103,6 +103,7 @@ namespace Systems
             ref var healthComponent = ref _entity.Get<HealthComponent>();
             healthComponent.maxValue = unitInitData.HealthValue;
             healthComponent.currentValue = unitInitData.HealthValue;
+            healthComponent.unit = _unitActor.gameObject;
         }
     }
 }

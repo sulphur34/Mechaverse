@@ -1,3 +1,4 @@
+using System;
 using Data;
 using ECS.Data;
 using Leopotam.Ecs;
@@ -19,6 +20,7 @@ namespace ECS
         private EcsWorld _world;
         private EcsSystems _updateSystems;
         private EcsSystems _fixedUpdateSystems;
+        private EcsSystems _lateUpdateSystems;
 
         private void Start()
         {
@@ -60,8 +62,9 @@ namespace ECS
             _fixedUpdateSystems.Add(new CameraDistanceSystem());
             //_updateSystems.Add(new PlayerMoveSystem());
             //_systems.Add(new AnimatedCharacterSystem());
-            _fixedUpdateSystems.Add(new OnCollisionObjectDestroySystem());
+            _fixedUpdateSystems.Add(new ProjectileCollisionSystem());
             _fixedUpdateSystems.Add(new CollisionComponentDestructionSystem());
+            _fixedUpdateSystems.Add(new DestroySystem());
 
             _updateSystems.Init();
             _fixedUpdateSystems.Init();

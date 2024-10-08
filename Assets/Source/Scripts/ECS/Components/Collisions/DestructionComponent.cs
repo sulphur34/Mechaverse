@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ECS.Components
 {
-    public struct CollisionObjectDestructionComponent
+    public struct DestructionComponent
     {
         public GameObject destroyObject;
     }

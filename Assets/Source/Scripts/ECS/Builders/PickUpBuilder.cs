@@ -28,7 +28,7 @@ namespace Systems
             ref var collisionParticleComponent = ref pickUp.Get<InstanceCollisionParticleComponent>();
             collisionParticleComponent.particleSystem = pickUpActor.CollisionParticleSystem;
 
-            ref var collisionObjectDestructionComponent = ref pickUp.Get<CollisionObjectDestructionComponent>();
+            ref var collisionObjectDestructionComponent = ref pickUp.Get<DestructionComponent>();
             collisionObjectDestructionComponent.destroyObject = pickUpActor.gameObject;
         }
     }

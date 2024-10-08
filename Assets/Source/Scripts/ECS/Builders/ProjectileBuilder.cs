@@ -31,9 +31,6 @@ namespace Systems
             movableComponent.rigidbody = projectile.Rigidbody2D;
             movableComponent.velocity = weapon.shootingPoint.transform.up * weapon.shotForce;
 
-            ref var collisionObjectDestructionComponent = ref projectileEntity.Get<CollisionObjectDestructionComponent>();
-            collisionObjectDestructionComponent.destroyObject = projectile.gameObject;
-
             ref var damageInflictComponent = ref projectileEntity.Get<DamageInflictComponent>();
             damageInflictComponent.value = weapon.damageValue;
         }
