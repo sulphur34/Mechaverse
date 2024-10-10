@@ -50,12 +50,12 @@ namespace Systems
             targetableComponent.transform = _unitActor.transform;
             targetableComponent.team = Teams.Enemy;
 
-            ref var enemyMovableComponent = ref _entity.Get<MovableComponent>();
-            enemyMovableComponent.moveSpeed = unitInitData.DefaultSpeed;
-            enemyMovableComponent.transform = _unitActor.transform;
+            // ref var enemyMovableComponent = ref _entity.Get<MovableComponent>();
+            // enemyMovableComponent.moveSpeed = unitInitData.DefaultSpeed;
+            // enemyMovableComponent.transform = _unitActor.transform;
 
-            ref var enemyRotatableComponent = ref _entity.Get<RotatableComponent>();
-            enemyRotatableComponent.transform = _unitActor.transform;
+            // ref var enemyRotatableComponent = ref _entity.Get<RotatableComponent>();
+            // enemyRotatableComponent.transform = _unitActor.transform;
 
             ref var enemyAnimationsComponent = ref _entity.Get<AnimatedCharacterComponent>();
             enemyAnimationsComponent.animator = _unitActor.Animator;

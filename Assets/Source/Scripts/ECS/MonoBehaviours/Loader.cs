@@ -51,8 +51,9 @@ namespace ECS
             _fixedUpdateSystems.Add(new PlayerRigidbodyMoveSystem());
             _fixedUpdateSystems.Add(new PlayerRigidbodyRotationSystem());
             _fixedUpdateSystems.Add(new RigidbodyFollowRotateSystem());
-            _fixedUpdateSystems.Add(new FollowMoveSystem());
-            _fixedUpdateSystems.Add(new FollowRotateSystem());
+            _fixedUpdateSystems.Add(new RigidbodyFollowMoveSystem());
+            //_fixedUpdateSystems.Add(new FollowMoveSystem());
+            //_fixedUpdateSystems.Add(new FollowRotateSystem());
             _fixedUpdateSystems.Add(new SelfCollisionParticleSystem());
             _fixedUpdateSystems.Add(new InstanceCollisionParticleSystem());
             _fixedUpdateSystems.Add(new ShootingSystem());

@@ -1,32 +1,40 @@
-using ECS.Components.Input;
+using ECS.Components;
 using ECS.Components.Movement;
 using Leopotam.Ecs;
 using UnityEngine;
 
 namespace Systems
 {
-    public class PlayerRigidbodyMoveSystem : IEcsRunSystem
+    public class RigidbodyFollowMoveSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<RigidbodyMovableComponent, MoveInputEventComponent> _playerMoveFilter;
+        private readonly EcsFilter<FollowComponent, RigidbodyMovableComponent> _followRotateFilter;
 
         public void Run()
         {
-            foreach (var entity in _playerMoveFilter)
+            foreach (var entity in _followRotateFilter)
             {
-                ref var movableComponent = ref _playerMoveFilter.Get1(entity);
-                ref var inputComponent = ref _playerMoveFilter.Get2(entity);
+                ref var followComponent = ref _followRotateFilter.Get1(entity);
+                ref var movableComponent = ref _followRotateFilter.Get2(entity);
+
+                if (followComponent.target == null)
+                {
+                    continue;
+                }
 
                 var movingData = movableComponent.movingData;
                 var rigidbody = movableComponent.rigidbody;
+
+                var direction = (followComponent.target.position - movableComponent.transform.position).normalized;
+
                 Vector2 localVelocity = movableComponent.transform.InverseTransformDirection(rigidbody.velocity);
                 var currentVelocityX = localVelocity.x;
                 var currentVelocityY = localVelocity.y;
 
-                var velocityY = inputComponent.direction.y < 0
-                    ? inputComponent.direction.y * movingData.accelerationBackward
-                    : inputComponent.direction.y * movingData.accelerationForward;
+                var velocityY = direction.y < 0
+                    ? direction.y * movingData.accelerationBackward
+                    : direction.y * movingData.accelerationForward;
 
-                var velocityX = inputComponent.direction.x * movingData.accelerationSide;
+                var velocityX = direction.x * movingData.accelerationSide;
 
                 velocityY = Mathf.Clamp(currentVelocityY + velocityY, movingData.maxSpeedBackward,
                     movingData.maxSpeedForward) - currentVelocityY;
@@ -37,7 +45,7 @@ namespace Systems
                 var localForce = movableComponent.transform.TransformDirection(new Vector2(velocityX, velocityY));
 
                 movableComponent.rigidbody.AddForce(localForce, ForceMode2D.Impulse);
-                movableComponent.isMoving = inputComponent.direction.sqrMagnitude > 0;
+                movableComponent.isMoving = direction.sqrMagnitude > 0;
             }
         }
     }
