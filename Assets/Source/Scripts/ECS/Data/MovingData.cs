@@ -5,7 +5,7 @@ namespace Data
     [Serializable]
     public struct MovingData
     {
-        public float maxSpeedForward ;
+        public float maxSpeedForward;
         public float maxSpeedBackward;
         public float maxSpeedRight;
         public float maxSpeedLeft;

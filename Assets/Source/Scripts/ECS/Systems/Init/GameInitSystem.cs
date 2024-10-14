@@ -1,14 +1,9 @@
-using System.Collections.Generic;
 using Data;
-using ECS.Components;
 using ECS.Components.Input;
-using ECS.Components.Movement;
 using ECS.Data;
-using ECS.MonoBehaviours;
 using EntityActors;
 using Leopotam.Ecs;
 using UnityEngine;
-using Utilitiy;
 
 namespace Systems
 {
@@ -49,15 +44,15 @@ namespace Systems
         {
             _weaponBuilder = new WeaponBuilder(_world);
             _turretBuilder = new TurretBuilder(_world);
-            var unitBuilder= new UnitBuilder(_world);
+            var unitBuilder = new UnitBuilder(_world);
             var pickUpBuilder = new PickUpBuilder(_world);
 
             var playerActor = CreatePlayer(unitBuilder);
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 5; i++)
             {
                 var enemySpawnPosition = _spawnPoint.position +
-                                         new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0f);
+                                         new Vector3(Random.Range(-150f, 150f), Random.Range(-150f, 150f), 0f);
                 unitBuilder.BuildEnemy(_enemyInitData, enemySpawnPosition, playerActor.transform);
                 pickUpBuilder.Build(_pickUpsInitData, _spawnPoint.position);
             }
@@ -73,10 +68,10 @@ namespace Systems
                 weapon.Get<ShootInputComponent>();
             }
 
-            foreach (var placeholder in playerActor.TurretPlaceholders)
-            {
-                _turretBuilder.CreateTurret(_turretInitData, placeholder, playerActor.Rigidbody2D);
-            }
+            // foreach (var placeholder in playerActor.TurretPlaceholders)
+            // {
+            //     _turretBuilder.CreateTurret(_turretInitData, placeholder, playerActor.Rigidbody2D);
+            // }
 
             return playerActor;
         }

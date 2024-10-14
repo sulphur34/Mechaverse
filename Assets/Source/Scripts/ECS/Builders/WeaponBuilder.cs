@@ -19,7 +19,7 @@ namespace Systems
             var weapon = _world.NewEntity();
 
             ref var weaponComponent = ref weapon.Get<WeaponComponent>();
-            weaponComponent.projectile = weaponInitData.ProjectilePrefab;
+            weaponComponent.projectileData = weaponInitData.ProjectileInitData;
             weaponComponent.reloadingSpeed = weaponInitData.ReloadingSpeed;
             weaponComponent.shotDelay = weaponInitData.ShotDelay;
             weaponComponent.shotForce = weaponInitData.ShotForce;
