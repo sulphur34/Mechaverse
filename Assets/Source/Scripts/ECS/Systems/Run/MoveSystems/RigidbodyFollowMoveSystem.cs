@@ -1,6 +1,7 @@
 using ECS.Components;
 using ECS.Components.Movement;
 using Leopotam.Ecs;
+using UnityEditor;
 using UnityEngine;
 
 namespace Systems
@@ -23,18 +24,24 @@ namespace Systems
 
                 var movingData = movableComponent.movingData;
                 var rigidbody = movableComponent.rigidbody;
+                var transform = movableComponent.transform;
 
-                var direction = (followComponent.target.position - movableComponent.transform.position).normalized;
+                var worldDirection = (followComponent.target.position - movableComponent.transform.position).normalized;
+                var localDirection = transform.InverseTransformDirection(worldDirection);
 
-                Vector2 localVelocity = movableComponent.transform.InverseTransformDirection(rigidbody.velocity);
-                var currentVelocityX = localVelocity.x;
-                var currentVelocityY = localVelocity.y;
+                if (_followRotateFilter.GetEntity(entity).Has<ProjectileComponent>())
+                {
+                    Debug.Log(worldDirection);
+                }
 
-                var velocityY = direction.y < 0
-                    ? direction.y * movingData.accelerationBackward
-                    : direction.y * movingData.accelerationForward;
+                var currentVelocityX = localDirection.x;
+                var currentVelocityY = localDirection.y;
 
-                var velocityX = direction.x * movingData.accelerationSide;
+                var velocityY = localDirection.y < 0
+                    ? localDirection.y * movingData.accelerationBackward
+                    : localDirection.y * movingData.accelerationForward;
+
+                var velocityX = localDirection.x * movingData.accelerationSide;
 
                 velocityY = Mathf.Clamp(currentVelocityY + velocityY, movingData.maxSpeedBackward,
                     movingData.maxSpeedForward) - currentVelocityY;
@@ -42,10 +49,15 @@ namespace Systems
                     Mathf.Clamp(currentVelocityX + velocityX, movingData.maxSpeedLeft, movingData.maxSpeedRight) -
                     currentVelocityX;
 
-                var localForce = movableComponent.transform.TransformDirection(new Vector2(velocityX, velocityY));
+                var localForce = new Vector2(velocityX, velocityY);
+                var worldForce = transform.TransformDirection(localForce);
 
-                movableComponent.rigidbody.AddForce(localForce, ForceMode2D.Impulse);
-                movableComponent.isMoving = direction.sqrMagnitude > 0;
+                Debug.DrawRay(movableComponent.transform.position, localForce, Color.green);
+                Debug.DrawRay(movableComponent.transform.position, worldForce, Color.red);
+                Debug.DrawLine(movableComponent.transform.position, followComponent.target.position, Color.cyan);
+
+                rigidbody.AddForce(worldForce, ForceMode2D.Impulse);
+                movableComponent.isMoving = rigidbody.velocity.sqrMagnitude > 0;
             }
         }
     }

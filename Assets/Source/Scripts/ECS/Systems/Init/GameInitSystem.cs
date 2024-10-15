@@ -49,7 +49,7 @@ namespace Systems
 
             var playerActor = CreatePlayer(unitBuilder);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 1; i++)
             {
                 var enemySpawnPosition = _spawnPoint.position +
                                          new Vector3(Random.Range(-150f, 150f), Random.Range(-150f, 150f), 0f);

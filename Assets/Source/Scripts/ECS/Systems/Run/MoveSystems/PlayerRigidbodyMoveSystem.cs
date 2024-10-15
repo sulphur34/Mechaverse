@@ -21,7 +21,6 @@ namespace Systems
                 Vector2 localVelocity = movableComponent.transform.InverseTransformDirection(rigidbody.velocity);
                 var currentVelocityX = localVelocity.x;
                 var currentVelocityY = localVelocity.y;
-
                 var velocityY = inputComponent.direction.y < 0
                     ? inputComponent.direction.y * movingData.accelerationBackward
                     : inputComponent.direction.y * movingData.accelerationForward;
@@ -33,10 +32,11 @@ namespace Systems
                 velocityX =
                     Mathf.Clamp(currentVelocityX + velocityX, movingData.maxSpeedLeft, movingData.maxSpeedRight) -
                     currentVelocityX;
-
-                var localForce = movableComponent.transform.TransformDirection(new Vector2(velocityX, velocityY));
-
-                movableComponent.rigidbody.AddForce(localForce, ForceMode2D.Impulse);
+                var localForce = new Vector2(velocityX, velocityY);
+                var worldForce = movableComponent.transform.TransformDirection(localForce);
+                Debug.DrawRay(movableComponent.transform.position, localForce, Color.yellow);
+                Debug.DrawRay(movableComponent.transform.position, worldForce, Color.blue);
+                movableComponent.rigidbody.AddForce(worldForce, ForceMode2D.Impulse);
                 movableComponent.isMoving = inputComponent.direction.sqrMagnitude > 0;
             }
         }
