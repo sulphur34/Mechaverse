@@ -1,7 +1,6 @@
 using ECS.Components;
 using ECS.Components.Movement;
 using Leopotam.Ecs;
-using UnityEditor;
 using UnityEngine;
 
 namespace Systems
@@ -34,14 +33,17 @@ namespace Systems
                     Debug.Log(worldDirection);
                 }
 
-                var currentVelocityX = localDirection.x;
-                var currentVelocityY = localDirection.y;
+                var currentVelocityX = rigidbody.velocity.x;
+                var currentVelocityY = rigidbody.velocity.y;
 
                 var velocityY = localDirection.y < 0
                     ? localDirection.y * movingData.accelerationBackward
                     : localDirection.y * movingData.accelerationForward;
 
                 var velocityX = localDirection.x * movingData.accelerationSide;
+
+                if(velocityY == 0 && velocityX == 0)
+                    continue;
 
                 velocityY = Mathf.Clamp(currentVelocityY + velocityY, movingData.maxSpeedBackward,
                     movingData.maxSpeedForward) - currentVelocityY;
@@ -56,7 +58,7 @@ namespace Systems
                 Debug.DrawRay(movableComponent.transform.position, worldForce, Color.red);
                 Debug.DrawLine(movableComponent.transform.position, followComponent.target.position, Color.cyan);
 
-                rigidbody.AddForce(worldForce, ForceMode2D.Impulse);
+                rigidbody.AddForce(worldForce, ForceMode2D.Force);
                 movableComponent.isMoving = rigidbody.velocity.sqrMagnitude > 0;
             }
         }

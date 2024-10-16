@@ -57,14 +57,25 @@ namespace Systems
             // ref var enemyRotatableComponent = ref _entity.Get<RotatableComponent>();
             // enemyRotatableComponent.transform = _unitActor.transform;
 
-            ref var enemyAnimationsComponent = ref _entity.Get<AnimatedCharacterComponent>();
-            enemyAnimationsComponent.animator = _unitActor.Animator;
+            // ref var enemyAnimationsComponent = ref _entity.Get<AnimatedCharacterComponent>();
+            // enemyAnimationsComponent.animator = _unitActor.Animator;
 
             ref var followComponent = ref _entity.Get<FollowComponent>();
             followComponent.target = target;
 
             ref var enemyMoveParticleComponent = ref _entity.Get<MoveParticleComponent>();
             enemyMoveParticleComponent.particleSystem = _unitActor.MoveParticleSystem;
+
+            return _unitActor;
+        }
+
+        public UnitActor BuildDummy(UnitInitData unitInitData, Vector3 spawnPoint, Transform target)
+        {
+            BuildUnit(unitInitData, spawnPoint);
+
+            ref var targetableComponent = ref _entity.Get<TargetableComponent>();
+            targetableComponent.transform = _unitActor.transform;
+            targetableComponent.team = Teams.Enemy;
 
             return _unitActor;
         }

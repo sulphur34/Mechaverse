@@ -24,14 +24,18 @@ namespace Systems
                 if (targetDirection == Vector2.zero)
                     continue;
 
+                // Debug.DrawRay(movableComponent.transform.position, localForce, Color.green);
+                // Debug.DrawRay(movableComponent.transform.position, worldForce, Color.red);
+                Debug.DrawLine(rotatableComponent.rigidbody.position, followComponent.target.position, Color.cyan);
+
                 float targetAngle = Mathf.Atan2(-targetDirection.x, targetDirection.y) * Mathf.Rad2Deg;
                 float currentAngle = rotatableComponent.rigidbody.rotation;
                 float angleDifference = Mathf.DeltaAngle(currentAngle, targetAngle);
                 float dampingTorque = -rotatableComponent.rigidbody.angularVelocity * 0.5f;
                 float torque = angleDifference * rotatableComponent.rotationData.acceleration + dampingTorque;
                 rotatableComponent.rigidbody.AddTorque(torque);
-                float clampedAngularVelocity = Mathf.Clamp(rotatableComponent.rigidbody.angularVelocity, -rotatableComponent.rotationData.maxSpeed, rotatableComponent.rotationData.maxSpeed);
-                rotatableComponent.rigidbody.angularVelocity = clampedAngularVelocity;
+                //float clampedAngularVelocity = Mathf.Clamp(rotatableComponent.rigidbody.angularVelocity, -rotatableComponent.rotationData.maxSpeed, rotatableComponent.rotationData.maxSpeed);
+                //rotatableComponent.rigidbody.angularVelocity = clampedAngularVelocity;
             }
         }
     }

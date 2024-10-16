@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <UnitPrefab>k__BackingField: {fileID: 2472373030957189281, guid: 6f64fef8e3f9a72408dff225ffadec18, type: 3}
   <MovingData>k__BackingField:
-    maxSpeedForward: 500
-    maxSpeedBackward: -50
+    maxSpeedForward: 5
+    maxSpeedBackward: -1
     maxSpeedRight: 0
     maxSpeedLeft: 0
     accelerationForward: 1
