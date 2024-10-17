@@ -16,10 +16,16 @@ namespace Systems
                 ref var followComponent = ref _followRotateFilter.Get1(entity);
                 ref var rotatableComponent = ref _followRotateFilter.Get2(entity);
 
-                if(followComponent.target == null)
+                if (followComponent.target == null)
                     continue;
 
-                Vector2 targetDirection = followComponent.target.position - rotatableComponent.rigidbody.transform.position;
+                if (_followRotateFilter.GetEntity(entity).Has<ProjectileComponent>())
+                {
+                    Debug.Log(rotatableComponent.rigidbody.angularVelocity);
+                }
+
+                Vector2 targetDirection =
+                    followComponent.target.position - rotatableComponent.rigidbody.transform.position;
 
                 if (targetDirection == Vector2.zero)
                     continue;
@@ -27,15 +33,14 @@ namespace Systems
                 // Debug.DrawRay(movableComponent.transform.position, localForce, Color.green);
                 // Debug.DrawRay(movableComponent.transform.position, worldForce, Color.red);
                 Debug.DrawLine(rotatableComponent.rigidbody.position, followComponent.target.position, Color.cyan);
-
+                var currentVelocity = rotatableComponent.rigidbody.angularVelocity;
                 float targetAngle = Mathf.Atan2(-targetDirection.x, targetDirection.y) * Mathf.Rad2Deg;
                 float currentAngle = rotatableComponent.rigidbody.rotation;
                 float angleDifference = Mathf.DeltaAngle(currentAngle, targetAngle);
-                float dampingTorque = -rotatableComponent.rigidbody.angularVelocity * 0.5f;
-                float torque = angleDifference * rotatableComponent.rotationData.acceleration + dampingTorque;
+                float torque = angleDifference * rotatableComponent.rotationData.acceleration;
+                var maxTorque = rotatableComponent.rotationData.maxSpeed;
+                torque = Mathf.Clamp(currentVelocity + torque, -maxTorque, maxTorque) - currentVelocity;
                 rotatableComponent.rigidbody.AddTorque(torque);
-                //float clampedAngularVelocity = Mathf.Clamp(rotatableComponent.rigidbody.angularVelocity, -rotatableComponent.rotationData.maxSpeed, rotatableComponent.rotationData.maxSpeed);
-                //rotatableComponent.rigidbody.angularVelocity = clampedAngularVelocity;
             }
         }
     }

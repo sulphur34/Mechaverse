@@ -28,22 +28,17 @@ namespace Systems
                 var worldDirection = (followComponent.target.position - movableComponent.transform.position).normalized;
                 var localDirection = transform.InverseTransformDirection(worldDirection);
 
-                if (_followRotateFilter.GetEntity(entity).Has<ProjectileComponent>())
-                {
-                    Debug.Log(worldDirection);
-                }
-
-                var currentVelocityX = rigidbody.velocity.x;
-                var currentVelocityY = rigidbody.velocity.y;
-
+                var velocityX = localDirection.x * movingData.accelerationSide;
                 var velocityY = localDirection.y < 0
                     ? localDirection.y * movingData.accelerationBackward
                     : localDirection.y * movingData.accelerationForward;
 
-                var velocityX = localDirection.x * movingData.accelerationSide;
-
                 if(velocityY == 0 && velocityX == 0)
                     continue;
+
+                Vector2 localSelfVelocity = movableComponent.transform.InverseTransformDirection(rigidbody.velocity);
+                var currentVelocityX = localSelfVelocity.x;
+                var currentVelocityY = localSelfVelocity.y;
 
                 velocityY = Mathf.Clamp(currentVelocityY + velocityY, movingData.maxSpeedBackward,
                     movingData.maxSpeedForward) - currentVelocityY;

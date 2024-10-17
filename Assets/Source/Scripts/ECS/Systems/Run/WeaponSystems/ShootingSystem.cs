@@ -19,7 +19,7 @@ namespace Systems
 
                 var projectileBuilder = new ProjectileBuilder(_ecsWorld);
 
-                projectileBuilder.BuildHoming(weapon);
+                projectileBuilder.BuildTest(weapon);
 
                 ref var entity = ref _filter.GetEntity(index);
                 entity.Del<ShotComponent>();

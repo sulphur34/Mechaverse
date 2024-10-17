@@ -16,6 +16,6 @@ MonoBehaviour:
   <WeaponActor>k__BackingField: {fileID: 4434057871369946765, guid: f36c562a30834aa44b0dbd37aed89708, type: 3}
   <MagazineCapacity>k__BackingField: 50
   <ShotDelay>k__BackingField: 0.5
-  <ShotForce>k__BackingField: 0
+  <ShotForce>k__BackingField: 1
   <ReloadingSpeed>k__BackingField: 5
   <DamageValue>k__BackingField: 2

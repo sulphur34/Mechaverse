@@ -61,5 +61,25 @@ namespace Systems
             trackerComponent.selfTeam = Teams.Player;
             trackerComponent.selfTransform = _projectileActor.transform;
         }
+
+        public void BuildTest(WeaponComponent weapon)
+        {
+            _projectileActor =
+                Object.Instantiate(weapon.projectileData.ProjectilePrefab, weapon.shootingPoint.position, weapon.shootingPoint.rotation);
+            _projectileEntity = _world.NewEntity();
+
+            _projectileEntity.Get<FollowComponent>();
+            ref var projectileComponent = ref _projectileEntity.Get<ProjectileComponent>();
+            projectileComponent.projectile = _projectileActor.gameObject;
+
+            ref var rotatableComponent = ref _projectileEntity.Get<RigidbodyRotatableComponent>();
+            rotatableComponent.rigidbody = _projectileActor.Rigidbody2D;
+            rotatableComponent.rotationData = weapon.projectileData.RotationData;
+
+            ref var trackerComponent = ref _projectileEntity.Get<TrackerComponent>();
+            trackerComponent.searchRadius = weapon.projectileData.TrackerRange;
+            trackerComponent.selfTeam = Teams.Player;
+            trackerComponent.selfTransform = _projectileActor.transform;
+        }
     }
 }

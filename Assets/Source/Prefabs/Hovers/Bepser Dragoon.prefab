@@ -1237,7 +1237,6 @@ MonoBehaviour:
   - {fileID: 1682533420621810791}
   <FrontWeaponsPlaceholders>k__BackingField:
   - {fileID: 6889836451894156033}
-  - {fileID: 60592910092894118}
 --- !u!95 &308831348782391470
 Animator:
   serializedVersion: 5
