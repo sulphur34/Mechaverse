@@ -15,15 +15,16 @@ MonoBehaviour:
   <UnitPrefab>k__BackingField: {fileID: 2472373030957189281, guid: 6f64fef8e3f9a72408dff225ffadec18, type: 3}
   <MovingData>k__BackingField:
     maxSpeedForward: 500
-    maxSpeedBackward: -1
-    maxSpeedRight: 0
-    maxSpeedLeft: 0
-    accelerationForward: 20
-    accelerationBackward: 1
-    accelerationSide: 1
+    maxSpeedBackward: -50
+    maxSpeedRight: 50
+    maxSpeedLeft: -50
+    accelerationForward: 100
+    accelerationBackward: 5
+    accelerationSide: 5
     inertiaDamping: 1
   <RotationData>k__BackingField:
     maxSpeed: 100
-    acceleration: 5
+    acceleration: 100
+    dumpingFactor: 0.5
   <DefaultSpeed>k__BackingField: 5
   <HealthValue>k__BackingField: 50000

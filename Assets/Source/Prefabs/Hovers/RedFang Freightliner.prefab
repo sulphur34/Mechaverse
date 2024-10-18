@@ -13,6 +13,18 @@ PrefabInstance:
       value: RedFang Freightliner
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: bd3f666ae78ae2140a02a738497cfd6f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: bd3f666ae78ae2140a02a738497cfd6f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: bd3f666ae78ae2140a02a738497cfd6f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: bd3f666ae78ae2140a02a738497cfd6f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -51,6 +63,10 @@ PrefabInstance:
     - target: {fileID: -7552582706839291426, guid: bd3f666ae78ae2140a02a738497cfd6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: bd3f666ae78ae2140a02a738497cfd6f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -98,6 +114,10 @@ MonoBehaviour:
   <Rigidbody2D>k__BackingField: {fileID: -3282742184473979109}
   <MoveParticleSystem>k__BackingField: {fileID: 6566799526887538164, guid: 284bc5870f2264c49b2e3596a1a60479, type: 3}
   <CollisionParticleSystem>k__BackingField: {fileID: 975600444475453836, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+  <SpriteRenderer>k__BackingField: {fileID: 0}
+  <TurretPlaceholders>k__BackingField: []
+  <InternalColliders>k__BackingField: []
+  <FrontWeaponsPlaceholders>k__BackingField: []
 --- !u!95 &3354481722574763603
 Animator:
   serializedVersion: 5
