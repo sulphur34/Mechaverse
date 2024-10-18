@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -1102268367, guid: 3076dfff2415a55429977017ca6e8be4, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 488790672, guid: 51a03c24442dfa549bd3ffb7c074e757, type: 3}
   m_Color: {r: 1, g: 0.99543256, b: 0.4764151, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 0}
   <Rigidbody2D>k__BackingField: {fileID: 4274563346871292179}
   <MoveParticleSystem>k__BackingField: {fileID: 6566799526887538164, guid: 284bc5870f2264c49b2e3596a1a60479, type: 3}
-  <CollisionParticleSystem>k__BackingField: {fileID: 975600444475453836, guid: f75e7d2ccc85b7d4980149ec2ec5e55d, type: 3}
+  <CollisionParticleSystem>k__BackingField: {fileID: 975600444475453836, guid: b5206125067a6894ba1c6639410d2790, type: 3}
 --- !u!70 &971434630599107931
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.12, y: 0.33}
+  m_Size: {x: 0.49, y: 1.99}
   m_Direction: 0
 --- !u!50 &4274563346871292179
 Rigidbody2D:

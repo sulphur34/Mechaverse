@@ -15,14 +15,15 @@ MonoBehaviour:
   <ProjectilePrefab>k__BackingField: {fileID: 378551262113612071, guid: d82231050d497494caad3718b03436ae, type: 3}
   <MovingData>k__BackingField:
     maxSpeedForward: 500
-    maxSpeedBackward: -50
+    maxSpeedBackward: 0
     maxSpeedRight: 0
     maxSpeedLeft: 0
-    accelerationForward: 1
-    accelerationBackward: 1
-    accelerationSide: 1
+    accelerationForward: 200
+    accelerationBackward: 0
+    accelerationSide: 0
     inertiaDamping: 1
   <RotationData>k__BackingField:
     maxSpeed: 100
-    acceleration: 0.001
+    acceleration: 20
+    dumpingFactor: 0.5
   <TrackerRange>k__BackingField: 500
