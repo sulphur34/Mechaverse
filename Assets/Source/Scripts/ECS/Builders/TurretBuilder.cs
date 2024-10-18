@@ -8,13 +8,10 @@ using UnityEngine;
 using Utilitiy;
 namespace Systems
 {
-    public class TurretBuilder
+    public class TurretBuilder : EcsBuilder
     {
-        private EcsWorld _world;
-
-        public TurretBuilder(EcsWorld world)
+        public TurretBuilder(EcsWorld world) : base(world)
         {
-            _world = world;
         }
 
         public TurretActor CreateTurret(TurretInitData turretInitData, Transform placeholder, Rigidbody2D connectBody)

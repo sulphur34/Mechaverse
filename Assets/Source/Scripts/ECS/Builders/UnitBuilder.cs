@@ -12,16 +12,13 @@ using Utilitiy;
 
 namespace Systems
 {
-    public class UnitBuilder
+    public class UnitBuilder : EcsBuilder
     {
-        private readonly EcsWorld _world;
-
         private UnitActor _unitActor;
         private EcsEntity _entity;
 
-        public UnitBuilder(EcsWorld world)
+        public UnitBuilder(EcsWorld world) : base(world)
         {
-            _world = world;
         }
 
         public UnitActor BuildPlayer(UnitInitData unitInitData, Vector3 spawnPoint)
@@ -53,21 +50,32 @@ namespace Systems
             targetableComponent.transform = _unitActor.transform;
             targetableComponent.team = Teams.Enemy;
 
-            ref var enemyMovableComponent = ref _entity.Get<MovableComponent>();
-            enemyMovableComponent.moveSpeed = unitInitData.DefaultSpeed;
-            enemyMovableComponent.transform = _unitActor.transform;
+            // ref var enemyMovableComponent = ref _entity.Get<MovableComponent>();
+            // enemyMovableComponent.moveSpeed = unitInitData.DefaultSpeed;
+            // enemyMovableComponent.transform = _unitActor.transform;
 
-            ref var enemyRotatableComponent = ref _entity.Get<RotatableComponent>();
-            enemyRotatableComponent.transform = _unitActor.transform;
+            // ref var enemyRotatableComponent = ref _entity.Get<RotatableComponent>();
+            // enemyRotatableComponent.transform = _unitActor.transform;
 
-            ref var enemyAnimationsComponent = ref _entity.Get<AnimatedCharacterComponent>();
-            enemyAnimationsComponent.animator = _unitActor.Animator;
+            // ref var enemyAnimationsComponent = ref _entity.Get<AnimatedCharacterComponent>();
+            // enemyAnimationsComponent.animator = _unitActor.Animator;
 
             ref var followComponent = ref _entity.Get<FollowComponent>();
             followComponent.target = target;
 
             ref var enemyMoveParticleComponent = ref _entity.Get<MoveParticleComponent>();
             enemyMoveParticleComponent.particleSystem = _unitActor.MoveParticleSystem;
+
+            return _unitActor;
+        }
+
+        public UnitActor BuildDummy(UnitInitData unitInitData, Vector3 spawnPoint, Transform target)
+        {
+            BuildUnit(unitInitData, spawnPoint);
+
+            ref var targetableComponent = ref _entity.Get<TargetableComponent>();
+            targetableComponent.transform = _unitActor.transform;
+            targetableComponent.team = Teams.Enemy;
 
             return _unitActor;
         }
@@ -106,6 +114,7 @@ namespace Systems
             ref var healthComponent = ref _entity.Get<HealthComponent>();
             healthComponent.maxValue = unitInitData.HealthValue;
             healthComponent.currentValue = unitInitData.HealthValue;
+            healthComponent.unit = _unitActor.gameObject;
         }
     }
 }

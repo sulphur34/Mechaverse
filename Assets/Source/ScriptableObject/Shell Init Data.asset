@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49a1d1bb5e4a468abd1b94b4d37ac06a, type: 3}
-  m_Name: EnemyUnitInitData 1
+  m_Script: {fileID: 11500000, guid: 20c91fd371c544f689b55a1951e8c774, type: 3}
+  m_Name: Shell Init Data
   m_EditorClassIdentifier: 
-  <UnitPrefab>k__BackingField: {fileID: 2472373030957189281, guid: 6f64fef8e3f9a72408dff225ffadec18, type: 3}
+  <ProjectilePrefab>k__BackingField: {fileID: 378551262113612071, guid: 52283ac788f2d2742a12fd0c3bb02f33, type: 3}
   <MovingData>k__BackingField:
     maxSpeedForward: 0
     maxSpeedBackward: 0
@@ -25,5 +25,4 @@ MonoBehaviour:
   <RotationData>k__BackingField:
     maxSpeed: 0
     acceleration: 0
-  <DefaultSpeed>k__BackingField: 5
-  <HealthValue>k__BackingField: 50
+  <TrackerRange>k__BackingField: 0

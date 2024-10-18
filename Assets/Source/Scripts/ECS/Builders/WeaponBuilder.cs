@@ -5,13 +5,10 @@ using UnityEngine;
 
 namespace Systems
 {
-    public class WeaponBuilder
+    public class WeaponBuilder : EcsBuilder
     {
-        private EcsWorld _world;
-
-        public WeaponBuilder(EcsWorld world)
+        public WeaponBuilder(EcsWorld world) : base(world)
         {
-            _world = world;
         }
 
         public EcsEntity Build(WeaponInitData weaponInitData, Transform container,
@@ -22,7 +19,7 @@ namespace Systems
             var weapon = _world.NewEntity();
 
             ref var weaponComponent = ref weapon.Get<WeaponComponent>();
-            weaponComponent.projectile = weaponInitData.ProjectilePrefab;
+            weaponComponent.projectileData = weaponInitData.ProjectileInitData;
             weaponComponent.reloadingSpeed = weaponInitData.ReloadingSpeed;
             weaponComponent.shotDelay = weaponInitData.ShotDelay;
             weaponComponent.shotForce = weaponInitData.ShotForce;

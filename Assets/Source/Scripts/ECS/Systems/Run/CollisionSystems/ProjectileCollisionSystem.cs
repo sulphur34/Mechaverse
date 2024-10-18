@@ -13,9 +13,10 @@ namespace Systems
             foreach (var i in _filter)
             {
                 ref var projectile = ref _filter.Get2(i);
+                ref var entity = ref _filter.GetEntity(i);
 
-                Object.Destroy(projectile.rigidbody2D.gameObject);
-                _filter.GetEntity(i).Destroy();
+                ref var destruction = ref entity.Get<DestructionComponent>();
+                destruction.destroyObject = projectile.projectile;
             }
         }
     }

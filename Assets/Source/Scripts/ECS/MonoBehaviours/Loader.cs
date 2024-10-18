@@ -1,3 +1,4 @@
+using System;
 using Data;
 using ECS.Data;
 using Leopotam.Ecs;
@@ -19,6 +20,7 @@ namespace ECS
         private EcsWorld _world;
         private EcsSystems _updateSystems;
         private EcsSystems _fixedUpdateSystems;
+        private EcsSystems _lateUpdateSystems;
 
         private void Start()
         {
@@ -49,18 +51,21 @@ namespace ECS
             _fixedUpdateSystems.Add(new PlayerRigidbodyMoveSystem());
             _fixedUpdateSystems.Add(new PlayerRigidbodyRotationSystem());
             _fixedUpdateSystems.Add(new RigidbodyFollowRotateSystem());
-            _fixedUpdateSystems.Add(new FollowMoveSystem());
-            _fixedUpdateSystems.Add(new FollowRotateSystem());
+            _fixedUpdateSystems.Add(new RigidbodyFollowMoveSystem());
+            //_fixedUpdateSystems.Add(new FollowMoveSystem());
+            //_fixedUpdateSystems.Add(new FollowRotateSystem());
             _fixedUpdateSystems.Add(new SelfCollisionParticleSystem());
             _fixedUpdateSystems.Add(new InstanceCollisionParticleSystem());
             _fixedUpdateSystems.Add(new ShootingSystem());
+            _fixedUpdateSystems.Add(new RigidbodyInstantMoveSystem());
             _fixedUpdateSystems.Add(new CollisionDamageSystem());
             _fixedUpdateSystems.Add(new HealthDamageSystem());
             _fixedUpdateSystems.Add(new CameraDistanceSystem());
             //_updateSystems.Add(new PlayerMoveSystem());
             //_systems.Add(new AnimatedCharacterSystem());
-            _fixedUpdateSystems.Add(new OnCollisionObjectDestroySystem());
+            _fixedUpdateSystems.Add(new ProjectileCollisionSystem());
             _fixedUpdateSystems.Add(new CollisionComponentDestructionSystem());
+            _fixedUpdateSystems.Add(new DestroySystem());
 
             _updateSystems.Init();
             _fixedUpdateSystems.Init();

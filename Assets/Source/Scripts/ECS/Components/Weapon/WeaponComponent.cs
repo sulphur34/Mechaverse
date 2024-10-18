@@ -1,3 +1,4 @@
+using ECS.Data;
 using EntityActors;
 using UnityEngine;
 
@@ -5,7 +6,7 @@ namespace ECS.Components
 {
     public struct WeaponComponent
     {
-        public ProjectileActor projectile;
+        public ProjectileInitData projectileData;
         public Transform shootingPoint;
         public float shotDelay;
         public float shotForce;

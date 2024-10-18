@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36753b7700454bcd923457aa0028c4a5, type: 3}
   m_Name: TurretWeaponInitData
   m_EditorClassIdentifier: 
-  <ProjectilePrefab>k__BackingField: {fileID: 378551262113612071, guid: 52283ac788f2d2742a12fd0c3bb02f33, type: 3}
+  <ProjectileInitData>k__BackingField: {fileID: 11400000, guid: 08734b31cc8a2fb4ba653db7c81947e0, type: 2}
   <WeaponActor>k__BackingField: {fileID: 4434057871369946765, guid: 455664ed7ae64ce4da8893de6e6ca007, type: 3}
-  <MagazineCapacity>k__BackingField: 50
+  <MagazineCapacity>k__BackingField: 0
   <ShotDelay>k__BackingField: 0.1
   <ShotForce>k__BackingField: 30
   <ReloadingSpeed>k__BackingField: 5

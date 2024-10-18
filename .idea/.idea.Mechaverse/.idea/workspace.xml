@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc2173bd-3974-4999-8524-d498470d59bd" name="Changes" comment="" />
+    <list default="true" id="cc2173bd-3974-4999-8524-d498470d59bd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/Burst.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/Burst.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Hovers/Bepser Dragoon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Missile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/Missile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/EnemyUnitInitData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/EnemyUnitInitData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/MainWeaponInitData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/MainWeaponInitData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/Missile Init Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/Missile Init Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Builders/ProjectileBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Builders/ProjectileBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/MoveSystems/RigidbodyFollowMoveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/MoveSystems/RigidbodyFollowMoveSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/MoveSystems/RigidbodyFollowRotateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/MoveSystems/RigidbodyFollowRotateSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/WeaponSystems/ShootingSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/WeaponSystems/ShootingSystem.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,16 +29,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1899c5bd2a6d466081cd705bee01d689955800/ab/c5038fc9/InspectorElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1899c5bd2a6d466081cd705bee01d689955800/ae/eb922552/Editor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39c25c7743074133aa8a65861b64bb6020a00/98/4dbb381b/Physics2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/12/b575257f/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/74/182a5886/Sprite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/9c/3692b5b4/Behaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/a7/0819be14/Transform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/b0/4b90c8cd/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/c4/2b167987/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/d0/aec1d7e8/Vector2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/DestructibleSpriteEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ShootInputSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Scripts/Utilitiy/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs@1213c31c9e/src/EcsEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.leopotam.ecs@1213c31c9e/src/EcsFilter.cs" root0="SKIP_HIGHLIGHTING" />
@@ -43,20 +58,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.4135021",
-    "git-widget-placeholder": "ecs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.4135021&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ecs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../Desktop/Mechaverse\Mechaverse.exe" />
@@ -92,10 +107,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="15200">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="15200" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -148,6 +163,16 @@
       <workItem from="1727859432869" duration="18443000" />
       <workItem from="1727913349302" duration="825000" />
       <workItem from="1727950578448" duration="7325000" />
+      <workItem from="1728207852635" duration="9784000" />
+      <workItem from="1728552003068" duration="10548000" />
+      <workItem from="1728571999554" duration="672000" />
+      <workItem from="1728645320240" duration="9161000" />
+      <workItem from="1728808368209" duration="4630000" />
+      <workItem from="1728901334300" duration="6228000" />
+      <workItem from="1728983373359" duration="9218000" />
+      <workItem from="1729077247175" duration="4631000" />
+      <workItem from="1729092015840" duration="6954000" />
+      <workItem from="1729154407969" duration="16389000" />
     </task>
     <servers />
   </component>
@@ -169,42 +194,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ProjectileCollisionSystem.cs</url>
-          <line>14</line>
-          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\ProjectileCollisionSystem.cs" containingFunctionPresentation="Method 'Run'">
-            <startOffsets>
-              <option value="343" />
-            </startOffsets>
-            <endOffsets>
-              <option value="384" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/ShootingSystem.cs</url>
-          <line>25</line>
-          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\ShootingSystem.cs" containingFunctionPresentation="Method 'Run'">
-            <startOffsets>
-              <option value="705" />
-            </startOffsets>
-            <endOffsets>
-              <option value="760" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/RechargingSystem.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/WeaponSystems/RechargingSystem.cs</url>
           <line>15</line>
-          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\RechargingSystem.cs" containingFunctionPresentation="Method 'Run'">
-            <startOffsets>
-              <option value="347" />
-            </startOffsets>
-            <endOffsets>
-              <option value="391" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\RechargingSystem.cs" containingFunctionPresentation="Method 'Run'" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
@@ -219,19 +211,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/TrackingSystem.cs</url>
-          <line>15</line>
-          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\TrackingSystem.cs" containingFunctionPresentation="Method 'Run'">
-            <startOffsets>
-              <option value="398" />
-            </startOffsets>
-            <endOffsets>
-              <option value="448" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Source/Scripts/SpriteDestructionSystem/QuadTree.cs</url>
@@ -258,6 +237,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Run/MoveSystems/RigidbodyFollowRotateSystem.cs</url>
+          <line>24</line>
+          <properties documentPath="C:\Users\LENOVO\Mechaverse\Assets\Source\Scripts\ECS\Systems\Run\MoveSystems\RigidbodyFollowRotateSystem.cs" containingFunctionPresentation="Method 'Run'">
+            <startOffsets>
+              <option value="833" />
+            </startOffsets>
+            <endOffsets>
+              <option value="834" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
