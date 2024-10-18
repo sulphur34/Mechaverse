@@ -33,9 +33,9 @@ namespace Systems
             ref var particleComponent = ref _projectileEntity.Get<InstanceCollisionParticleComponent>();
             particleComponent.particleSystem = _projectileActor.CollisionParticleSystem;
 
-            // ref var movableComponent = ref _projectileEntity.Get<RigidbodyInstantMovableComponent>();
-            // movableComponent.rigidbody = _projectileActor.Rigidbody2D;
-            // movableComponent.velocity = weapon.shootingPoint.transform.up * weapon.shotForce;
+            ref var movableComponent = ref _projectileEntity.Get<RigidbodyInstantMovableComponent>();
+            movableComponent.rigidbody = _projectileActor.Rigidbody2D;
+            movableComponent.velocity = weapon.shootingPoint.transform.up * weapon.shotForce;
 
             ref var damageInflictComponent = ref _projectileEntity.Get<DamageInflictComponent>();
             damageInflictComponent.value = weapon.damageValue;

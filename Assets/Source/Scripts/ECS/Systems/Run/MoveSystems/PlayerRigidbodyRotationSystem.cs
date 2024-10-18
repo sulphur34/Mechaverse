@@ -16,15 +16,24 @@ namespace Systems
                 ref var rotatableComponent = ref _playerMoveFilter.Get1(entity);
                 ref var inputComponent = ref _playerMoveFilter.Get2(entity);
                 Vector2 targetDirection = new Vector2(inputComponent.direction.y, -inputComponent.direction.x);
-                if (targetDirection == Vector2.zero) continue;
+
+                if (targetDirection == Vector2.zero)
+                    continue;
+
+                var rotationData = rotatableComponent.rotationData;
+                var rigidbody = rotatableComponent.rigidbody;
+
                 float targetAngle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
                 float currentAngle = rotatableComponent.rigidbody.rotation;
                 float angleDifference = Mathf.DeltaAngle(currentAngle, targetAngle);
-                float dampingTorque = -rotatableComponent.rigidbody.angularVelocity * 0.5f;
-                float torque = angleDifference * rotatableComponent.rotationData.acceleration + dampingTorque;
-                rotatableComponent.rigidbody.AddTorque(torque);
-                float clampedAngularVelocity = Mathf.Clamp(rotatableComponent.rigidbody.angularVelocity, -rotatableComponent.rotationData.maxSpeed, rotatableComponent.rotationData.maxSpeed);
-                rotatableComponent.rigidbody.angularVelocity = clampedAngularVelocity;
+                float dampingTorque = -rigidbody.angularVelocity * rotationData.dumpingFactor;
+                float torque = angleDifference * rotationData.acceleration + dampingTorque;
+                rigidbody.AddTorque(torque);
+                float clampedAngularVelocity = Mathf.Clamp(
+                    rigidbody.angularVelocity,
+                    -rotationData.maxSpeed,
+                    rotationData.maxSpeed);
+                rigidbody.angularVelocity = clampedAngularVelocity;
             }
         }
     }

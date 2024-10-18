@@ -7,5 +7,6 @@ namespace Data
     {
         public float maxSpeed;
         public float acceleration;
+        public float dumpingFactor;
     }
 }
