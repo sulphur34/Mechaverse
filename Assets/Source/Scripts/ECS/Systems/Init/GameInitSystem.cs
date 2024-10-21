@@ -68,10 +68,10 @@ namespace Systems
                 weapon.Get<ShootInputComponent>();
             }
 
-            // foreach (var placeholder in playerActor.TurretPlaceholders)
-            // {
-            //     _turretBuilder.CreateTurret(_turretInitData, placeholder, playerActor.Rigidbody2D);
-            // }
+            foreach (var placeholder in playerActor.TurretPlaceholders)
+            {
+                _turretBuilder.CreateTurret(_turretInitData, placeholder, playerActor.Rigidbody2D);
+            }
 
             return playerActor;
         }
