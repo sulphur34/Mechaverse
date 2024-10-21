@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c91fd371c544f689b55a1951e8c774, type: 3}
   m_Name: Bullet Init Data
   m_EditorClassIdentifier: 
-  <ProjectilePrefab>k__BackingField: {fileID: 378551262113612071, guid: 52283ac788f2d2742a12fd0c3bb02f33, type: 3}
+  <ProjectilePrefab>k__BackingField: {fileID: 378551262113612071, guid: abf182c67dd8057498ce0e660e5fec90, type: 3}
   <MovingData>k__BackingField:
     maxSpeedForward: 0
     maxSpeedBackward: 0
@@ -25,4 +25,5 @@ MonoBehaviour:
   <RotationData>k__BackingField:
     maxSpeed: 0
     acceleration: 0
+    dumpingFactor: 0
   <TrackerRange>k__BackingField: 0
