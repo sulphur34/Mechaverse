@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc2173bd-3974-4999-8524-d498470d59bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/RocketTrail.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/RocketTrail.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mechaverse/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Materials/Particle/Smoke.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Materials/Particle/Smoke.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Materials/Particle/Smoke.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Materials/Particle/Smoke.mat.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/Burst.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/Burst.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Projectiles/BlasterProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Projectiles/BlasterProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/RocketTrail.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Effects/RocketTrail.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Projectiles/BulletProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Projectiles/BulletProjectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Projectiles/CannonProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Projectiles/CannonProjectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Projectiles/Missile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Projectiles/Missile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/CannonLv1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/CannonLv1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/CannonLv2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/CannonLv2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/CannonLv3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Prefabs/Turrets/CannonLv3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/Bullet Init Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/Bullet Init Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/MainWeaponInitData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/MainWeaponInitData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/TurretInitData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/TurretInitData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/ScriptableObject/TurretWeaponInitData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/ScriptableObject/TurretWeaponInitData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Scripts/ECS/Systems/Init/GameInitSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
