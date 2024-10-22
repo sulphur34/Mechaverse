@@ -4,17 +4,19 @@ using ECS.Data;
 using Leopotam.Ecs;
 using Systems;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ECS
 {
     public class Loader : MonoBehaviour
     {
-        [SerializeField] private UnitInitData _playerInitData;
-        [SerializeField] private UnitInitData _enemyInitData;
-        [SerializeField] private WeaponInitData _turretWeaponInitData;
-        [SerializeField] private WeaponInitData _mainWeaponInitData;
-        [SerializeField] private TurretInitData _turretInitData;
-        [SerializeField] private PickUpsInitData _pickUpsInitData;
+        [SerializeField] private UnitInitConfig _playerInitConfig;
+        [SerializeField] private UnitInitConfig _enemyInitConfig;
+        [SerializeField] private WeaponInitConfig _turretWeaponInitConfig;
+        [SerializeField] private WeaponInitConfig _mainWeaponInitConfig;
+        [SerializeField] private TurretInitConfig _turretInitConfig;
+        [SerializeField] private PickUpsInitConfig _pickUpsInitConfig;
+
         [SerializeField] private Transform _spawnPoint;
 
         private EcsWorld _world;
@@ -29,12 +31,12 @@ namespace ECS
             _fixedUpdateSystems = new EcsSystems(_world);
 
             _updateSystems.Add(new GameInitSystem(
-                _playerInitData,
-                _enemyInitData,
-                _turretInitData,
+                _playerInitConfig,
+                _enemyInitConfig,
+                _turretInitConfig,
                 _spawnPoint,
-                _turretWeaponInitData,
-                _pickUpsInitData, _mainWeaponInitData));
+                _turretWeaponInitConfig,
+                _pickUpsInitConfig, _mainWeaponInitConfig));
             _updateSystems.Add(new MoveParticleSystem());
             _updateSystems.Add(new DetectionSystem());
             _updateSystems.Add(new AutofireWeaponSystem());

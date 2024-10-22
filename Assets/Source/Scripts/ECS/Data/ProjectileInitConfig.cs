@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ECS.Data
 {
     [CreateAssetMenu(menuName = "ProjectileInitData")]
-    public class ProjectileInitData : ScriptableObject
+    public class ProjectileInitConfig : ScriptableObject
     {
         [field: SerializeField] public ProjectileActor ProjectilePrefab { get; private set; }
         [field: SerializeField] public MovingData MovingData { get; private set; }

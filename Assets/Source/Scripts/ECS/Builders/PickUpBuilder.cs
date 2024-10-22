@@ -13,17 +13,17 @@ namespace Systems
         {
         }
 
-        public void Build(PickUpsInitData initData, Vector3 spawnPoint)
+        public void Build(PickUpsInitConfig initConfig, Vector3 spawnPoint)
         {
             var pickUpSpawnPosition = spawnPoint +
                                       new Vector3(Random.Range(-100f, 100f), Random.Range(-100f, 100f), 0f);
             var pickUpActor =
-                Object.Instantiate(initData.PickUpActor, pickUpSpawnPosition, Quaternion.identity);
+                Object.Instantiate(initConfig.PickUpActor, pickUpSpawnPosition, Quaternion.identity);
             var pickUp = _world.NewEntity();
             pickUpActor.GetComponent<ColliderObserver>().Initialize(_world, pickUp);
 
             ref var healthRefillComponent = ref pickUp.Get<HealthRefillComponent>();
-            healthRefillComponent.refillAmount = initData.HealthRestoreValue;
+            healthRefillComponent.refillAmount = initConfig.HealthRestoreValue;
 
             ref var collisionParticleComponent = ref pickUp.Get<InstanceCollisionParticleComponent>();
             collisionParticleComponent.particleSystem = pickUpActor.CollisionParticleSystem;

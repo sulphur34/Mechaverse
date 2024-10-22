@@ -14,10 +14,10 @@ namespace Systems
         {
         }
 
-        public TurretActor CreateTurret(TurretInitData turretInitData, Transform placeholder, Rigidbody2D connectBody)
+        public TurretActor CreateTurret(TurretInitConfig turretInitConfig, Transform placeholder, Rigidbody2D connectBody)
         {
                 var turretActor = Object.Instantiate(
-                    turretInitData.TurretPrefab,
+                    turretInitConfig.TurretPrefab,
                     placeholder.transform.position,
                     Quaternion.identity);
 
@@ -27,17 +27,17 @@ namespace Systems
                 turretActor.HingeJoint.connectedAnchor = placeholder.transform.position;
 
                 ref var trackerComponent = ref turret.Get<TrackerComponent>();
-                trackerComponent.searchRadius = turretInitData.TrackerRange;
+                trackerComponent.searchRadius = turretInitConfig.TrackerRange;
                 trackerComponent.selfTeam = Teams.Player;
                 trackerComponent.selfTransform = turretActor.transform;
 
                 ref var rotatableComponent = ref turret.Get<RigidbodyRotatableComponent>();
                 rotatableComponent.rigidbody = turretActor.Rigidbody2D;
-                rotatableComponent.rotationData = turretInitData.RotationData;
+                rotatableComponent.rotationData = turretInitConfig.RotationData;
 
                 ref var detectionComponent = ref turret.Get<DetectionComponent>();
-                detectionComponent.angle = turretInitData.DetectAngle;
-                detectionComponent.radius = turretInitData.DetectRadius;
+                detectionComponent.angle = turretInitConfig.DetectAngle;
+                detectionComponent.radius = turretInitConfig.DetectRadius;
 
                 turret.Get<FollowComponent>();
 
@@ -49,7 +49,7 @@ namespace Systems
 
                 foreach (var position in turretActor.WeaponPositions)
                 {
-                    var weapon = weaponBuilder.Build(turretInitData.WeaponInitData, turretActor.transform,
+                    var weapon = weaponBuilder.Build(turretInitConfig.WeaponInitConfig, turretActor.transform,
                         position);
                     turretComponent.weapons.Add(weapon);
                 }

@@ -11,23 +11,23 @@ namespace Systems
         {
         }
 
-        public EcsEntity Build(WeaponInitData weaponInitData, Transform container,
+        public EcsEntity Build(WeaponInitConfig weaponInitConfig, Transform container,
             Vector2 position)
         {
-            var weaponActor = Object.Instantiate(weaponInitData.WeaponActor, container);
+            var weaponActor = Object.Instantiate(weaponInitConfig.WeaponActor, container);
             weaponActor.transform.position = position;
             var weapon = _world.NewEntity();
 
             ref var weaponComponent = ref weapon.Get<WeaponComponent>();
-            weaponComponent.projectileData = weaponInitData.ProjectileInitData;
-            weaponComponent.reloadingSpeed = weaponInitData.ReloadingSpeed;
-            weaponComponent.shotDelay = weaponInitData.ShotDelay;
-            weaponComponent.shotForce = weaponInitData.ShotForce;
+            weaponComponent.ProjectileConfig = weaponInitConfig.ProjectileInitConfig;
+            weaponComponent.reloadingSpeed = weaponInitConfig.ReloadingSpeed;
+            weaponComponent.shotDelay = weaponInitConfig.ShotDelay;
+            weaponComponent.shotForce = weaponInitConfig.ShotForce;
             weaponComponent.shootingPoint = weaponActor.ShootPoint;
-            weaponComponent.damageValue = weaponInitData.DamageValue;
+            weaponComponent.damageValue = weaponInitConfig.DamageValue;
 
             ref var ammoComponent = ref weapon.Get<AmmoComponent>();
-            ammoComponent.maxCapacity = weaponInitData.MagazineCapacity;
+            ammoComponent.maxCapacity = weaponInitConfig.MagazineCapacity;
             ammoComponent.currentCapacity = ammoComponent.maxCapacity;
 
             return weapon;

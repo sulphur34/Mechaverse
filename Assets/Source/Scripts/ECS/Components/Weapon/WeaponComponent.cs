@@ -6,7 +6,7 @@ namespace ECS.Components
 {
     public struct WeaponComponent
     {
-        public ProjectileInitData projectileData;
+        public ProjectileInitConfig ProjectileConfig;
         public Transform shootingPoint;
         public float shotDelay;
         public float shotForce;
