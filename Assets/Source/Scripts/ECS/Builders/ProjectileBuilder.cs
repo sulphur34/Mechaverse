@@ -21,7 +21,7 @@ namespace Systems
         public void Build(WeaponComponent weapon)
         {
             _projectileActor =
-                Object.Instantiate(weapon.projectileData.ProjectilePrefab, weapon.shootingPoint.position, weapon.shootingPoint.rotation);
+                Object.Instantiate(weapon.ProjectileConfig.ProjectilePrefab, weapon.shootingPoint.position, weapon.shootingPoint.rotation);
             _projectileEntity = _world.NewEntity();
             _projectileActor.GetComponent<ColliderObserver>().Initialize(_world, _projectileEntity);
 
@@ -50,14 +50,14 @@ namespace Systems
             ref var movableComponent = ref _projectileEntity.Get<RigidbodyMovableComponent>();
             movableComponent.rigidbody = _projectileActor.Rigidbody2D;
             movableComponent.transform = _projectileActor.transform;
-            movableComponent.movingData = weapon.projectileData.MovingData;
+            movableComponent.movingData = weapon.ProjectileConfig.MovingData;
 
             ref var rotatableComponent = ref _projectileEntity.Get<RigidbodyRotatableComponent>();
             rotatableComponent.rigidbody = _projectileActor.Rigidbody2D;
-            rotatableComponent.rotationData = weapon.projectileData.RotationData;
+            rotatableComponent.rotationData = weapon.ProjectileConfig.RotationData;
 
             ref var trackerComponent = ref _projectileEntity.Get<TrackerComponent>();
-            trackerComponent.searchRadius = weapon.projectileData.TrackerRange;
+            trackerComponent.searchRadius = weapon.ProjectileConfig.TrackerRange;
             trackerComponent.selfTeam = Teams.Player;
             trackerComponent.selfTransform = _projectileActor.transform;
         }
@@ -65,7 +65,7 @@ namespace Systems
         public void BuildTest(WeaponComponent weapon)
         {
             _projectileActor =
-                Object.Instantiate(weapon.projectileData.ProjectilePrefab, weapon.shootingPoint.position, weapon.shootingPoint.rotation);
+                Object.Instantiate(weapon.ProjectileConfig.ProjectilePrefab, weapon.shootingPoint.position, weapon.shootingPoint.rotation);
             _projectileEntity = _world.NewEntity();
 
             _projectileEntity.Get<FollowComponent>();
@@ -74,10 +74,10 @@ namespace Systems
 
             ref var rotatableComponent = ref _projectileEntity.Get<RigidbodyRotatableComponent>();
             rotatableComponent.rigidbody = _projectileActor.Rigidbody2D;
-            rotatableComponent.rotationData = weapon.projectileData.RotationData;
+            rotatableComponent.rotationData = weapon.ProjectileConfig.RotationData;
 
             ref var trackerComponent = ref _projectileEntity.Get<TrackerComponent>();
-            trackerComponent.searchRadius = weapon.projectileData.TrackerRange;
+            trackerComponent.searchRadius = weapon.ProjectileConfig.TrackerRange;
             trackerComponent.selfTeam = Teams.Player;
             trackerComponent.selfTransform = _projectileActor.transform;
         }

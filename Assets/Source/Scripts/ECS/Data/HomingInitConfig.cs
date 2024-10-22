@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ECS.Data
 {
     [CreateAssetMenu(menuName = "HomingInitData")]
-    public class HomingInitData : ScriptableObject
+    public class HomingInitConfig : ScriptableObject
     {
 
     }

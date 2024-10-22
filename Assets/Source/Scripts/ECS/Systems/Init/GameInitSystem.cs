@@ -11,33 +11,33 @@ namespace Systems
     {
         private readonly EcsWorld _world;
 
-        private readonly UnitInitData _playerInitData;
-        private readonly UnitInitData _enemyInitData;
+        private readonly UnitInitConfig _playerInitConfig;
+        private readonly UnitInitConfig _enemyInitConfig;
 
         private readonly Transform _spawnPoint;
-        private readonly TurretInitData _turretInitData;
-        private readonly WeaponInitData _turretWeaponInitData;
-        private readonly PickUpsInitData _pickUpsInitData;
-        private readonly WeaponInitData _mainWeaponInitData;
+        private readonly TurretInitConfig _turretInitConfig;
+        private readonly WeaponInitConfig _turretWeaponInitConfig;
+        private readonly PickUpsInitConfig _pickUpsInitConfig;
+        private readonly WeaponInitConfig _mainWeaponInitConfig;
         private WeaponBuilder _weaponBuilder;
         private TurretBuilder _turretBuilder;
         private PickUpBuilder _pickUpBuilder;
 
-        public GameInitSystem(UnitInitData playerInitData,
-            UnitInitData enemyInitData,
-            TurretInitData turretInitData,
+        public GameInitSystem(UnitInitConfig playerInitConfig,
+            UnitInitConfig enemyInitConfig,
+            TurretInitConfig turretInitConfig,
             Transform spawnPoint,
-            WeaponInitData turretWeaponInitData,
-            PickUpsInitData pickUpsInitData,
-            WeaponInitData mainWeaponInitData)
+            WeaponInitConfig turretWeaponInitConfig,
+            PickUpsInitConfig pickUpsInitConfig,
+            WeaponInitConfig mainWeaponInitConfig)
         {
-            _playerInitData = playerInitData;
-            _enemyInitData = enemyInitData;
-            _turretInitData = turretInitData;
+            _playerInitConfig = playerInitConfig;
+            _enemyInitConfig = enemyInitConfig;
+            _turretInitConfig = turretInitConfig;
             _spawnPoint = spawnPoint;
-            _turretWeaponInitData = turretWeaponInitData;
-            _mainWeaponInitData = mainWeaponInitData;
-            _pickUpsInitData = pickUpsInitData;
+            _turretWeaponInitConfig = turretWeaponInitConfig;
+            _mainWeaponInitConfig = mainWeaponInitConfig;
+            _pickUpsInitConfig = pickUpsInitConfig;
         }
 
         public void Init()
@@ -53,24 +53,24 @@ namespace Systems
             {
                 var enemySpawnPosition = _spawnPoint.position +
                                          new Vector3(Random.Range(-150f, 150f), Random.Range(-150f, 150f), 0f);
-                unitBuilder.BuildEnemy(_enemyInitData, enemySpawnPosition, playerActor.transform);
-                pickUpBuilder.Build(_pickUpsInitData, _spawnPoint.position);
+                unitBuilder.BuildEnemy(_enemyInitConfig, enemySpawnPosition, playerActor.transform);
+                pickUpBuilder.Build(_pickUpsInitConfig, _spawnPoint.position);
             }
         }
 
         private UnitActor CreatePlayer(UnitBuilder builder)
         {
-            var playerActor = builder.BuildPlayer(_playerInitData, _spawnPoint.position);
+            var playerActor = builder.BuildPlayer(_playerInitConfig, _spawnPoint.position);
 
             foreach (var weaponPlace in playerActor.FrontWeaponsPlaceholders)
             {
-                var weapon = _weaponBuilder.Build(_mainWeaponInitData, weaponPlace, weaponPlace.position);
+                var weapon = _weaponBuilder.Build(_mainWeaponInitConfig, weaponPlace, weaponPlace.position);
                 weapon.Get<ShootInputComponent>();
             }
 
             foreach (var placeholder in playerActor.TurretPlaceholders)
             {
-                _turretBuilder.CreateTurret(_turretInitData, placeholder, playerActor.Rigidbody2D);
+                _turretBuilder.CreateTurret(_turretInitConfig, placeholder, playerActor.Rigidbody2D);
             }
 
             return playerActor;

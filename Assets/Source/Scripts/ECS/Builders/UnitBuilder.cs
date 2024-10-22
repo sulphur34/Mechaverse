@@ -21,9 +21,9 @@ namespace Systems
         {
         }
 
-        public UnitActor BuildPlayer(UnitInitData unitInitData, Vector3 spawnPoint)
+        public UnitActor BuildPlayer(UnitInitConfig unitInitConfig, Vector3 spawnPoint)
         {
-            BuildUnit(unitInitData, spawnPoint);
+            BuildUnit(unitInitConfig, spawnPoint);
 
             ref var cameraComponent = ref _entity.Get<CameraComponent>();
             cameraComponent.camera = Camera.main;
@@ -42,9 +42,9 @@ namespace Systems
             return _unitActor;
         }
 
-        public UnitActor BuildEnemy(UnitInitData unitInitData, Vector3 spawnPoint, Transform target)
+        public UnitActor BuildEnemy(UnitInitConfig unitInitConfig, Vector3 spawnPoint, Transform target)
         {
-            BuildUnit(unitInitData, spawnPoint);
+            BuildUnit(unitInitConfig, spawnPoint);
 
             ref var targetableComponent = ref _entity.Get<TargetableComponent>();
             targetableComponent.transform = _unitActor.transform;
@@ -69,9 +69,9 @@ namespace Systems
             return _unitActor;
         }
 
-        public UnitActor BuildDummy(UnitInitData unitInitData, Vector3 spawnPoint, Transform target)
+        public UnitActor BuildDummy(UnitInitConfig unitInitConfig, Vector3 spawnPoint, Transform target)
         {
-            BuildUnit(unitInitData, spawnPoint);
+            BuildUnit(unitInitConfig, spawnPoint);
 
             ref var targetableComponent = ref _entity.Get<TargetableComponent>();
             targetableComponent.transform = _unitActor.transform;
@@ -80,9 +80,9 @@ namespace Systems
             return _unitActor;
         }
 
-        private void BuildUnit(UnitInitData unitInitData, Vector3 spawnPoint)
+        private void BuildUnit(UnitInitConfig unitInitConfig, Vector3 spawnPoint)
         {
-            _unitActor = Object.Instantiate(unitInitData.UnitPrefab, spawnPoint, Quaternion.identity);
+            _unitActor = Object.Instantiate(unitInitConfig.UnitPrefab, spawnPoint, Quaternion.identity);
             _entity = _world.NewEntity();
 
             CollidersInteractionsRemover.Remove(_unitActor.InternalColliders);
@@ -94,13 +94,13 @@ namespace Systems
             var rigidbody = _unitActor.Rigidbody2D;
 
             ref var movableComponent = ref _entity.Get<RigidbodyMovableComponent>();
-            movableComponent.movingData = unitInitData.MovingData;
+            movableComponent.movingData = unitInitConfig.MovingData;
             movableComponent.rigidbody = rigidbody;
             movableComponent.transform = _unitActor.transform;
 
             ref var rotatableComponent = ref _entity.Get<RigidbodyRotatableComponent>();
             rotatableComponent.rigidbody = rigidbody;
-            rotatableComponent.rotationData = unitInitData.RotationData;
+            rotatableComponent.rotationData = unitInitConfig.RotationData;
 
             ref var animationsComponent = ref _entity.Get<AnimatedCharacterComponent>();
             animationsComponent.animator = _unitActor.Animator;
@@ -112,8 +112,8 @@ namespace Systems
             collisionParticleComponent.particleSystem = _unitActor.CollisionParticleSystem;
 
             ref var healthComponent = ref _entity.Get<HealthComponent>();
-            healthComponent.maxValue = unitInitData.HealthValue;
-            healthComponent.currentValue = unitInitData.HealthValue;
+            healthComponent.maxValue = unitInitConfig.HealthValue;
+            healthComponent.currentValue = unitInitConfig.HealthValue;
             healthComponent.unit = _unitActor.gameObject;
         }
     }
