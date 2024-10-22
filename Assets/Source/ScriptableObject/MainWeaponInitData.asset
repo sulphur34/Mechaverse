@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36753b7700454bcd923457aa0028c4a5, type: 3}
   m_Name: MainWeaponInitData
   m_EditorClassIdentifier: 
-  <ProjectileInitData>k__BackingField: {fileID: 11400000, guid: 08734b31cc8a2fb4ba653db7c81947e0, type: 2}
+  <ProjectileInitConfig>k__BackingField: {fileID: 11400000, guid: 08734b31cc8a2fb4ba653db7c81947e0, type: 2}
   <WeaponActor>k__BackingField: {fileID: 4434057871369946765, guid: f36c562a30834aa44b0dbd37aed89708, type: 3}
   <MagazineCapacity>k__BackingField: 50
   <ShotDelay>k__BackingField: 0.1

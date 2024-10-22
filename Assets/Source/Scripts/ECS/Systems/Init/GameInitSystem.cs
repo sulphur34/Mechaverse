@@ -1,6 +1,7 @@
 using Data;
 using ECS.Components.Input;
 using ECS.Data;
+using ECS.MonoBehaviours;
 using EntityActors;
 using Leopotam.Ecs;
 using UnityEngine;
@@ -23,21 +24,15 @@ namespace Systems
         private TurretBuilder _turretBuilder;
         private PickUpBuilder _pickUpBuilder;
 
-        public GameInitSystem(UnitInitConfig playerInitConfig,
-            UnitInitConfig enemyInitConfig,
-            TurretInitConfig turretInitConfig,
-            Transform spawnPoint,
-            WeaponInitConfig turretWeaponInitConfig,
-            PickUpsInitConfig pickUpsInitConfig,
-            WeaponInitConfig mainWeaponInitConfig)
+        public GameInitSystem(GameData gameData, SpawnPoint spawnPoint)
         {
-            _playerInitConfig = playerInitConfig;
-            _enemyInitConfig = enemyInitConfig;
-            _turretInitConfig = turretInitConfig;
-            _spawnPoint = spawnPoint;
-            _turretWeaponInitConfig = turretWeaponInitConfig;
-            _mainWeaponInitConfig = mainWeaponInitConfig;
-            _pickUpsInitConfig = pickUpsInitConfig;
+            _playerInitConfig = gameData.PlayerInitConfig;
+            _enemyInitConfig = gameData.EnemyInitConfig;
+            _turretInitConfig = gameData.TurretInitConfig;
+            _spawnPoint = spawnPoint.transform;
+            _turretWeaponInitConfig = gameData.TurretWeaponInitConfig;
+            _mainWeaponInitConfig = gameData.MainWeaponInitConfig;
+            _pickUpsInitConfig = gameData.PickUpsInitConfig;
         }
 
         public void Init()
