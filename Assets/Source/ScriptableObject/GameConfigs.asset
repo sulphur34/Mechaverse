@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881231be8a674e74a5a40d3193bcf8d0, type: 3}
+  m_Name: GameConfigs
+  m_EditorClassIdentifier: 
+  <EnemyInitConfig>k__BackingField: {fileID: 11400000, guid: dab332147c3188740aa64677125a58cb, type: 2}
+  <PlayerInitConfig>k__BackingField: {fileID: 11400000, guid: 835b90ccdb87a8a4898cce8dcf71f8e8, type: 2}
+  <TurretWeaponInitConfig>k__BackingField: {fileID: 11400000, guid: 8c2090232abd5284ba1db22d39a638b2, type: 2}
+  <MainWeaponInitConfig>k__BackingField: {fileID: 11400000, guid: b5265222d987f764bb6d9f317ff4fe3f, type: 2}
+  <TurretInitConfig>k__BackingField: {fileID: 11400000, guid: 4dbb8ad454284b94e9aba33548f554e1, type: 2}
+  <PickUpsInitConfig>k__BackingField: {fileID: 11400000, guid: 709bc31f609bf884e97b4b05e9245a2e, type: 2}
